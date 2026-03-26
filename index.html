@@ -8,7 +8,6 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* HTU Maroon & Gold */
   --maroon:#6B1A2A;
   --maroon-mid:#8B2234;
   --maroon-light:#F9F0F2;
@@ -29,502 +28,150 @@
   --sh:0 2px 8px rgba(107,26,42,.08);
   --sh-lg:0 8px 32px rgba(107,26,42,.12);
 }
-
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
 .wrap{max-width:600px;margin:0 auto;padding:0 0 100px}
-
-/* ── HEADER ── */
 .hdr{position:relative;overflow:hidden;background:var(--maroon-deep);padding:0;margin-bottom:0}
 .hdr-inner{padding:36px 28px 32px;position:relative;z-index:2}
 .hdr-geo{position:absolute;inset:0;z-index:1;overflow:hidden}
-.hdr-geo::before{
-  content:'';position:absolute;
-  top:-60px;right:-60px;
-  width:260px;height:260px;
-  border-radius:50%;
-  border:40px solid rgba(201,153,26,.12);
-}
-.hdr-geo::after{
-  content:'';position:absolute;
-  bottom:-40px;left:-30px;
-  width:180px;height:180px;
-  border-radius:50%;
-  border:30px solid rgba(255,255,255,.04);
-}
-.hdr-geo-line{
-  position:absolute;top:0;right:80px;
-  width:1px;height:100%;
-  background:linear-gradient(to bottom,transparent,rgba(201,153,26,.2),transparent);
-}
-
+.hdr-geo::before{content:'';position:absolute;top:-60px;right:-60px;width:260px;height:260px;border-radius:50%;border:40px solid rgba(201,153,26,.12)}
+.hdr-geo::after{content:'';position:absolute;bottom:-40px;left:-30px;width:180px;height:180px;border-radius:50%;border:30px solid rgba(255,255,255,.04)}
+.hdr-geo-line{position:absolute;top:0;right:80px;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(201,153,26,.2),transparent)}
 .hdr-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.hdr-pill{
-  background:rgba(201,153,26,.2);
-  border:1px solid rgba(201,153,26,.35);
-  color:var(--gold-mid);
-  border-radius:20px;padding:4px 12px;
-  font-size:11px;font-weight:600;letter-spacing:.5px;
-}
+.hdr-pill{background:rgba(201,153,26,.2);border:1px solid rgba(201,153,26,.35);color:var(--gold-mid);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:600;letter-spacing:.5px}
 .hdr-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25)}
 .hdr-tag{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1px;text-transform:uppercase}
-
-.hdr h1{
-  font-family:'Playfair Display',serif;
-  font-size:28px;font-weight:900;
-  color:#fff;line-height:1.2;
-  margin-bottom:12px;
-  letter-spacing:-.3px;
-}
+.hdr h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#fff;line-height:1.2;margin-bottom:12px;letter-spacing:-.3px}
 .hdr h1 span{color:var(--gold-mid)}
 .hdr-desc{font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.65;max-width:440px;margin-bottom:20px}
-
 .hdr-stats{display:flex;flex-wrap:wrap;gap:8px}
-.hdr-stat{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:8px;
-  padding:7px 13px;
-  font-size:12px;color:rgba(255,255,255,.8);font-weight:500;
-  display:flex;align-items:center;gap:6px;
-}
+.hdr-stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:7px 13px;font-size:12px;color:rgba(255,255,255,.8);font-weight:500;display:flex;align-items:center;gap:6px}
 .hdr-stat-icon{font-size:14px}
-
-.consent-bar{
-  background:rgba(201,153,26,.08);
-  border-top:1px solid rgba(201,153,26,.15);
-  padding:10px 28px;
-  font-size:11px;color:rgba(255,255,255,.38);
-  line-height:1.5;font-style:italic;
-  position:relative;z-index:2;
-}
-
-/* ── GOLD ACCENT STRIPE ── */
-.gold-stripe{
-  height:4px;
-  background:linear-gradient(90deg, var(--maroon-mid), var(--gold), var(--gold-mid), var(--maroon-mid));
-  background-size:200% 100%;
-  animation:shimmer 4s linear infinite;
-}
+.consent-bar{background:rgba(201,153,26,.08);border-top:1px solid rgba(201,153,26,.15);padding:10px 28px;font-size:11px;color:rgba(255,255,255,.38);line-height:1.5;font-style:italic;position:relative;z-index:2}
+.gold-stripe{height:4px;background:linear-gradient(90deg,var(--maroon-mid),var(--gold),var(--gold-mid),var(--maroon-mid));background-size:200% 100%;animation:shimmer 4s linear infinite}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-
-/* ── MAIN CONTENT AREA ── */
 .content{padding:20px 16px}
-
-/* ── PROGRESS ── */
-.prog{
-  background:var(--white);
-  border:1px solid var(--bdr);
-  border-radius:14px;
-  padding:16px 18px;
-  margin-bottom:20px;
-  box-shadow:var(--sh);
-}
+.prog{background:var(--white);border:1px solid var(--bdr);border-radius:14px;padding:16px 18px;margin-bottom:20px;box-shadow:var(--sh)}
 .prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .prog-sec{font-size:12px;font-weight:600;color:var(--maroon)}
 .prog-ct{font-size:12px;color:var(--muted)}
 .prog-track{height:6px;background:#EDE3DC;border-radius:6px;overflow:hidden;margin-bottom:10px}
-.prog-fill{
-  height:100%;
-  background:linear-gradient(90deg,var(--maroon),var(--gold));
-  border-radius:6px;
-  transition:width .5s cubic-bezier(.4,0,.2,1);
-  width:0%;
-}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--maroon),var(--gold));border-radius:6px;transition:width .5s cubic-bezier(.4,0,.2,1);width:0%}
 .prog-dots{display:flex;gap:4px}
 .pd{flex:1;height:3px;border-radius:2px;background:#EDE3DC;transition:background .3s}
 .pd.done{background:var(--maroon)}
 .pd.now{background:var(--gold)}
-
-/* ── SECTION LABEL ── */
-.sec-lbl{
-  display:none;
-  align-items:center;gap:10px;
-  margin-bottom:14px;
-}
-.sec-lbl-num{
-  background:var(--maroon);color:#fff;
-  width:26px;height:26px;border-radius:6px;
-  font-size:11px;font-weight:700;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;
-}
+.sec-lbl{display:none;align-items:center;gap:10px;margin-bottom:14px}
+.sec-lbl-num{background:var(--maroon);color:#fff;width:26px;height:26px;border-radius:6px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif}
 .sec-lbl-text{font-size:12px;font-weight:600;color:var(--maroon);letter-spacing:.5px;text-transform:uppercase}
 .sec-lbl-line{flex:1;height:1px;background:linear-gradient(90deg,var(--bdr),transparent)}
-
-/* ── CARD ── */
-.card{
-  background:var(--white);
-  border:1.5px solid var(--bdr);
-  border-radius:16px;
-  padding:24px 22px;
-  margin-bottom:12px;
-  box-shadow:var(--sh);
-  display:none;
-  transition:border-color .25s,box-shadow .25s,transform .15s;
-  animation:cardIn .25s ease;
-}
+.card{background:var(--white);border:1.5px solid var(--bdr);border-radius:16px;padding:24px 22px;margin-bottom:12px;box-shadow:var(--sh);display:none;transition:border-color .25s,box-shadow .25s;animation:cardIn .25s ease}
 @keyframes cardIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .card.on{display:block}
-.card.active{
-  border-color:var(--maroon-mid);
-  box-shadow:0 0 0 3px rgba(107,26,42,.08),var(--sh);
-}
+.card.active{border-color:var(--maroon-mid);box-shadow:0 0 0 3px rgba(107,26,42,.08),var(--sh)}
 .card.done{border-color:rgba(201,153,26,.5)}
-
 .qtag{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.qnum{
-  background:var(--maroon-light);color:var(--maroon);
-  border-radius:6px;padding:3px 9px;
-  font-size:11px;font-weight:700;letter-spacing:.5px;
-}
+.qnum{background:var(--maroon-light);color:var(--maroon);border-radius:6px;padding:3px 9px;font-size:11px;font-weight:700;letter-spacing:.5px}
 .qtype{font-size:11px;color:var(--muted);background:#F5F1EE;border-radius:5px;padding:3px 8px}
 .qtxt{font-size:16px;font-weight:600;line-height:1.5;margin-bottom:6px;color:var(--ink)}
-.qwhy{
-  font-size:12.5px;color:var(--sub);margin-bottom:14px;
-  padding:8px 12px;
-  background:var(--gold-pale);
-  border-left:3px solid var(--gold);
-  border-radius:0 7px 7px 0;
-  line-height:1.55;
-}
-
-/* ── SINGLE SELECT ── */
+.qwhy{font-size:12.5px;color:var(--sub);margin-bottom:14px;padding:8px 12px;background:var(--gold-pale);border-left:3px solid var(--gold);border-radius:0 7px 7px 0;line-height:1.55}
 .opts{display:flex;flex-direction:column;gap:8px}
-.opt{
-  display:flex;align-items:flex-start;gap:12px;
-  padding:14px 16px;
-  border:1.5px solid var(--bdr);
-  border-radius:11px;
-  cursor:pointer;
-  font-size:15px;line-height:1.45;
-  user-select:none;
-  transition:border-color .15s,background .15s,transform .1s;
-  -webkit-tap-highlight-color:transparent;
-  position:relative;overflow:hidden;
-}
-.opt::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(201,153,26,.06),transparent);
-  opacity:0;transition:opacity .15s;
-}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1.5px solid var(--bdr);border-radius:11px;cursor:pointer;font-size:15px;line-height:1.45;user-select:none;transition:border-color .15s,background .15s,transform .1s;-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden}
+.opt::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,153,26,.06),transparent);opacity:0;transition:opacity .15s}
 .opt:hover{border-color:var(--gold);background:var(--gold-pale)}
 .opt:hover::before{opacity:1}
 .opt:active{transform:scale(.99)}
-.opt.sel{
-  border-color:var(--maroon);
-  background:var(--maroon-light);
-  font-weight:500;
-}
-.dot{
-  width:20px;height:20px;min-width:20px;
-  border-radius:50%;border:2px solid var(--bdr);
-  display:flex;align-items:center;justify-content:center;
-  margin-top:1px;transition:all .15s;
-  flex-shrink:0;
-}
+.opt.sel{border-color:var(--maroon);background:var(--maroon-light);font-weight:500}
+.dot{width:20px;height:20px;min-width:20px;border-radius:50%;border:2px solid var(--bdr);display:flex;align-items:center;justify-content:center;margin-top:1px;transition:all .15s;flex-shrink:0}
 .opt.sel .dot{border-color:var(--maroon);background:var(--maroon)}
 .opt.sel .dot::after{content:'';width:7px;height:7px;border-radius:50%;background:#fff}
 .opt-sub{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:3px}
-
-/* ── PILLS ── */
 .pills{display:flex;flex-wrap:wrap;gap:8px}
-.pill{
-  padding:10px 16px;
-  border:1.5px solid var(--bdr);
-  border-radius:24px;
-  font-size:13.5px;font-weight:500;
-  cursor:pointer;
-  transition:all .15s;
-  user-select:none;
-  -webkit-tap-highlight-color:transparent;
-  color:var(--sub);
-}
+.pill{padding:10px 16px;border:1.5px solid var(--bdr);border-radius:24px;font-size:13.5px;font-weight:500;cursor:pointer;transition:all .15s;user-select:none;-webkit-tap-highlight-color:transparent;color:var(--sub)}
 .pill:hover{border-color:var(--gold-mid);background:var(--gold-pale);color:var(--ink)}
 .pill:active{transform:scale(.97)}
-.pill.sel{
-  border-color:var(--maroon);
-  background:var(--maroon-light);
-  color:var(--maroon-dark);
-  font-weight:600;
-}
-
-/* ── EMOJI SCALE ── */
+.pill.sel{border-color:var(--maroon);background:var(--maroon-light);color:var(--maroon-dark);font-weight:600}
 .esc{display:flex;gap:6px}
-.eb{
-  flex:1;padding:14px 4px 12px;
-  border:1.5px solid var(--bdr);
-  border-radius:12px;
-  text-align:center;cursor:pointer;
-  transition:all .18s;
-  user-select:none;
-  -webkit-tap-highlight-color:transparent;
-  min-height:74px;background:var(--white);
-}
+.eb{flex:1;padding:14px 4px 12px;border:1.5px solid var(--bdr);border-radius:12px;text-align:center;cursor:pointer;transition:all .18s;user-select:none;-webkit-tap-highlight-color:transparent;min-height:74px;background:var(--white)}
 .eb .ei{font-size:26px;line-height:1;display:block}
 .eb .el{display:block;font-size:10px;color:var(--muted);margin-top:6px;line-height:1.3;word-break:break-word}
 .eb:hover{border-color:var(--gold);background:var(--gold-pale);transform:translateY(-3px);box-shadow:0 4px 12px rgba(201,153,26,.15)}
 .eb:active{transform:translateY(0)}
-.eb.sel{
-  border-color:var(--maroon);
-  background:var(--maroon-light);
-  transform:translateY(-3px);
-  box-shadow:0 4px 12px rgba(107,26,42,.15);
-}
+.eb.sel{border-color:var(--maroon);background:var(--maroon-light);transform:translateY(-3px);box-shadow:0 4px 12px rgba(107,26,42,.15)}
 .eb.sel .el{color:var(--maroon)}
-
-/* ── CALLOUT ── */
 .co{border-radius:10px;padding:13px 15px;font-size:13px;line-height:1.65;margin-top:14px}
 .co-gold{background:var(--gold-pale);border-left:3px solid var(--gold);color:var(--gold-dark)}
 .co-maroon{background:var(--maroon-light);border-left:3px solid var(--maroon);color:var(--maroon-dark)}
 .co strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;font-weight:700}
-
-/* ── STICKY NAV ── */
-.nav{
-  position:sticky;bottom:0;
-  background:rgba(250,246,242,.96);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  padding:14px 16px 10px;
-  display:flex;justify-content:space-between;align-items:center;
-  border-top:1px solid var(--bdr);
-  gap:10px;
-}
-.btn{
-  padding:14px 28px;border-radius:11px;
-  font-size:15px;font-weight:600;
-  cursor:pointer;border:none;
-  font-family:'Plus Jakarta Sans',sans-serif;
-  transition:all .2s;
-  min-height:50px;
-  letter-spacing:.1px;
-  -webkit-tap-highlight-color:transparent;
-}
-.btn-b{
-  background:var(--white);
-  border:1.5px solid var(--bdr);
-  color:var(--sub);
-  min-width:90px;
-}
+.nav{position:sticky;bottom:0;background:rgba(250,246,242,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 16px 10px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--bdr);gap:10px}
+.btn{padding:14px 28px;border-radius:11px;font-size:15px;font-weight:600;cursor:pointer;border:none;font-family:'Plus Jakarta Sans',sans-serif;transition:all .2s;min-height:50px;letter-spacing:.1px;-webkit-tap-highlight-color:transparent}
+.btn-b{background:var(--white);border:1.5px solid var(--bdr);color:var(--sub);min-width:90px}
 .btn-b:hover{border-color:var(--maroon-mid);color:var(--maroon)}
-.btn-n{
-  background:var(--maroon);color:#fff;
-  box-shadow:0 4px 14px rgba(107,26,42,.3);
-  flex:1;max-width:260px;
-}
+.btn-n{background:var(--maroon);color:#fff;box-shadow:0 4px 14px rgba(107,26,42,.3);flex:1;max-width:260px}
 .btn-n:hover{background:var(--maroon-mid);transform:translateY(-1px);box-shadow:0 6px 20px rgba(107,26,42,.35)}
 .btn-n:active{transform:translateY(0)}
-.btn-s{
-  background:linear-gradient(135deg,var(--maroon-dark),var(--maroon));
-  color:#fff;
-  box-shadow:0 4px 14px rgba(107,26,42,.35);
-  flex:1;max-width:260px;
-  position:relative;overflow:hidden;
-}
-.btn-s::after{
-  content:'';position:absolute;
-  top:-50%;left:-50%;width:200%;height:200%;
-  background:linear-gradient(45deg,transparent 40%,rgba(201,153,26,.15) 50%,transparent 60%);
-  transform:translateX(-100%);
-}
+.btn-s{background:linear-gradient(135deg,var(--maroon-dark),var(--maroon));color:#fff;box-shadow:0 4px 14px rgba(107,26,42,.35);flex:1;max-width:260px;position:relative;overflow:hidden}
+.btn-s::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent 40%,rgba(201,153,26,.15) 50%,transparent 60%);transform:translateX(-100%)}
 .btn-s:hover::after{transform:translateX(100%);transition:transform .5s}
 .btn-s:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(107,26,42,.4)}
-
-/* ── THANK YOU ── */
 .ty{display:none;padding:40px 16px 60px;text-align:center}
-.ty-header{
-  background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));
-  border-radius:20px;padding:36px 24px;
-  margin-bottom:20px;position:relative;overflow:hidden;
-}
-.ty-header::before{
-  content:'';position:absolute;
-  top:-40px;right:-40px;width:200px;height:200px;
-  border-radius:50%;border:35px solid rgba(201,153,26,.15);
-}
+.ty-header{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));border-radius:20px;padding:36px 24px;margin-bottom:20px;position:relative;overflow:hidden}
+.ty-header::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;border:35px solid rgba(201,153,26,.15)}
 @keyframes popIn{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
 .ty-ic{font-size:52px;margin-bottom:14px;animation:popIn .4s cubic-bezier(.175,.885,.32,1.275);display:block}
 .ty h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#fff;margin-bottom:8px}
 .ty-sub{color:rgba(255,255,255,.72);font-size:14px;line-height:1.65;max-width:380px;margin:0 auto}
-
 .ty-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.ty-c{
-  background:var(--white);border:1px solid var(--bdr);
-  border-radius:13px;padding:16px;
-  box-shadow:var(--sh);text-align:left;
-}
+.ty-c{background:var(--white);border:1px solid var(--bdr);border-radius:13px;padding:16px;box-shadow:var(--sh);text-align:left}
 .ty-cl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .ty-cv{font-size:22px;font-weight:700;color:var(--maroon);font-family:'Playfair Display',serif}
 .ty-cs{font-size:11px;color:var(--muted);margin-top:3px}
-
-.ty-share{
-  background:linear-gradient(135deg,var(--gold-pale),var(--maroon-light));
-  border:1px solid var(--bdr);
-  border-radius:13px;padding:18px;
-  font-size:13.5px;color:var(--ink);line-height:1.65;text-align:left;
-}
-.ty-share strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;color:var(--maroon);font-weight:700}
-
-/* ── SHARE BLOCK ── */
-.ty-share-block{
-  background:var(--white);
-  border:1px solid var(--bdr);
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:var(--sh);
-}
-.ty-share-header{
-  background:linear-gradient(135deg,var(--maroon-light),var(--gold-pale));
-  padding:16px 18px 14px;
-  border-bottom:1px solid var(--bdr);
-}
-.ty-share-header strong{
-  display:block;font-size:13px;font-weight:700;
-  color:var(--maroon);margin-bottom:4px;
-  text-transform:uppercase;letter-spacing:.8px;
-}
+/* SHARE BLOCK */
+.ty-share-block{background:var(--white);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;box-shadow:var(--sh)}
+.ty-share-header{background:linear-gradient(135deg,var(--maroon-light),var(--gold-pale));padding:16px 18px 14px;border-bottom:1px solid var(--bdr)}
+.ty-share-header strong{display:block;font-size:13px;font-weight:700;color:var(--maroon);margin-bottom:4px;text-transform:uppercase;letter-spacing:.8px}
 .ty-share-header p{font-size:13px;color:var(--sub);line-height:1.55}
-
-.ty-share-row{
-  display:flex;gap:0;
-  align-items:stretch;
-}
-
-/* QR */
-.ty-qr-wrap{
-  padding:18px 16px;
-  border-right:1px solid var(--bdr);
-  display:flex;flex-direction:column;
-  align-items:center;gap:10px;
-  background:#FAFAF8;
-  min-width:130px;
-}
+.ty-share-row{display:flex;align-items:stretch}
+.ty-qr-wrap{padding:18px 16px;border-right:1px solid var(--bdr);display:flex;flex-direction:column;align-items:center;gap:10px;background:#FAFAF8;min-width:130px}
 .ty-qr-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
-.ty-qr-box{
-  width:100px;height:100px;
-  border:2px solid var(--maroon);
-  border-radius:10px;
-  background:#fff;
-  position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.qr-inner{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.qr-corner{
-  position:absolute;
-  width:22px;height:22px;
-  border:3px solid var(--maroon);
-}
-.qr-tl{top:6px;left:6px;border-right:none;border-bottom:none;border-radius:3px 0 0 0}
-.qr-tr{top:6px;right:6px;border-left:none;border-bottom:none;border-radius:0 3px 0 0}
-.qr-bl{bottom:6px;left:6px;border-right:none;border-top:none;border-radius:0 0 0 3px}
-.qr-grid{
-  display:grid;
-  grid-template-columns:repeat(6,7px);
-  grid-template-rows:repeat(5,7px);
-  gap:2px;
-  opacity:.35;
-}
-.qr-dot{width:7px;height:7px;background:var(--maroon);border-radius:1px}
-.qr-replace-note{
-  position:absolute;inset:0;
-  background:rgba(255,255,255,.88);
-  display:flex;align-items:center;justify-content:center;
-  font-size:9px;font-weight:700;color:var(--maroon);
-  text-align:center;line-height:1.4;
-  letter-spacing:.3px;
-  border-radius:8px;
-}
+.ty-qr-box{width:100px;height:100px;border:2px solid var(--maroon);border-radius:10px;background:#fff;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ty-qr-box img{width:100%;height:100%;object-fit:contain;border-radius:8px}
 .ty-qr-sub{font-size:10px;color:var(--muted);text-align:center;line-height:1.4}
-
-/* Actions */
 .ty-actions{flex:1;padding:16px;display:flex;flex-direction:column;gap:12px}
-
-.ty-link-box{
-  background:#F9F5F1;border:1px solid var(--bdr);
-  border-radius:10px;padding:12px 13px;
-}
+.ty-link-box{background:#F9F5F1;border:1px solid var(--bdr);border-radius:10px;padding:12px 13px}
 .ty-link-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:7px}
 .ty-link-row{display:flex;gap:8px;align-items:center}
-.ty-link-url{
-  flex:1;font-size:12px;color:var(--maroon);
-  font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-  background:var(--white);border:1px solid var(--bdr);
-  border-radius:7px;padding:7px 10px;
-  font-family:monospace;
-}
-.ty-copy-btn{
-  background:var(--maroon);color:#fff;
-  border:none;border-radius:7px;
-  width:34px;height:34px;
-  font-size:16px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;transition:all .15s;
-  -webkit-tap-highlight-color:transparent;
-}
+.ty-link-url{flex:1;font-size:12px;color:var(--maroon);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:var(--white);border:1px solid var(--bdr);border-radius:7px;padding:7px 10px;font-family:monospace}
+.ty-copy-btn{background:var(--maroon);color:#fff;border:none;border-radius:7px;width:34px;height:34px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s;-webkit-tap-highlight-color:transparent}
 .ty-copy-btn:hover{background:var(--maroon-mid)}
 .ty-copy-btn.copied{background:var(--gold-dark)}
 .ty-link-hint{font-size:10px;color:var(--muted);margin-top:6px;font-style:italic}
-
 .ty-btns{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.ty-share-btn{
-  display:flex;align-items:center;justify-content:center;gap:6px;
-  padding:10px 8px;border-radius:9px;
-  font-size:12.5px;font-weight:600;
-  cursor:pointer;border:1.5px solid var(--bdr);
-  text-decoration:none;color:var(--ink);
-  background:var(--white);
-  transition:all .15s;
-  -webkit-tap-highlight-color:transparent;
-  font-family:'Plus Jakarta Sans',sans-serif;
-}
+.ty-share-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 8px;border-radius:9px;font-size:12.5px;font-weight:600;cursor:pointer;border:1.5px solid var(--bdr);text-decoration:none;color:var(--ink);background:var(--white);transition:all .15s;-webkit-tap-highlight-color:transparent;font-family:'Plus Jakarta Sans',sans-serif}
 .ty-share-btn:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
 .ty-share-btn-icon{font-size:15px}
-.ty-share-wa{border-color:#25D366;color:#128C7E}
-.ty-share-wa:hover{background:#f0fff4;border-color:#25D366}
-.ty-share-sms{border-color:var(--gold);color:var(--gold-dark)}
-.ty-share-sms:hover{background:var(--gold-pale);border-color:var(--gold)}
-.ty-share-ig{border-color:#E1306C;color:#C13584}
-.ty-share-ig:hover{background:#fff0f5;border-color:#E1306C}
-.ty-share-more{border-color:var(--maroon);color:var(--maroon)}
-.ty-share-more:hover{background:var(--maroon-light);border-color:var(--maroon)}
-
-/* ── MOBILE ── */
+.ty-share-wa{border-color:#25D366;color:#128C7E}.ty-share-wa:hover{background:#f0fff4}
+.ty-share-sms{border-color:var(--gold);color:var(--gold-dark)}.ty-share-sms:hover{background:var(--gold-pale)}
+.ty-share-ig{border-color:#E1306C;color:#C13584}.ty-share-ig:hover{background:#fff0f5}
+.ty-share-more{border-color:var(--maroon);color:var(--maroon)}.ty-share-more:hover{background:var(--maroon-light)}
 @media(max-width:480px){
-  .hdr-inner{padding:28px 18px 24px}
-  .hdr h1{font-size:23px}
-  .content{padding:16px 12px}
-  .card{padding:20px 16px}
-  .qtxt{font-size:15px}
-  .opt{padding:13px 13px}
-  .pill{padding:10px 14px;font-size:13px}
-  .esc{gap:4px}
-  .eb{padding:12px 2px 10px;min-height:68px}
-  .eb .ei{font-size:22px}
-  .btn{padding:13px 20px;font-size:14px}
-  .hdr-stat{font-size:11px;padding:6px 10px}
-  .consent-bar{padding:10px 18px}
-  .prog{padding:13px 14px}
+  .hdr-inner{padding:28px 18px 24px}.hdr h1{font-size:23px}.content{padding:16px 12px}
+  .card{padding:20px 16px}.qtxt{font-size:15px}.opt{padding:13px 13px}
+  .pill{padding:10px 14px;font-size:13px}.esc{gap:4px}.eb{padding:12px 2px 10px;min-height:68px}
+  .eb .ei{font-size:22px}.btn{padding:13px 20px;font-size:14px}
+  .hdr-stat{font-size:11px;padding:6px 10px}.consent-bar{padding:10px 18px}.prog{padding:13px 14px}
   .ty-share-row{flex-direction:column}
   .ty-qr-wrap{border-right:none;border-bottom:1px solid var(--bdr);flex-direction:row;gap:14px;align-items:center;padding:14px 16px}
-  .ty-qr-box{width:72px;height:72px;min-width:72px}
-  .ty-qr-sub{text-align:left}
-  .ty-btns{grid-template-columns:1fr 1fr}
+  .ty-qr-box{width:72px;height:72px;min-width:72px}.ty-qr-sub{text-align:left}
 }
 @media(max-width:360px){
-  .hdr h1{font-size:20px}
-  .eb .el{display:none}
-  .ty-grid{grid-template-columns:1fr}
-  .pill{padding:9px 12px;font-size:12.5px}
+  .hdr h1{font-size:20px}.eb .el{display:none}.ty-grid{grid-template-columns:1fr}.pill{padding:9px 12px;font-size:12.5px}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <!-- HEADER -->
   <div class="hdr">
-    <div class="hdr-geo">
-      <div class="hdr-geo-line"></div>
-    </div>
+    <div class="hdr-geo"><div class="hdr-geo-line"></div></div>
     <div class="hdr-inner">
       <div class="hdr-eyebrow">
         <div class="hdr-pill">EVHybridNoire Research</div>
@@ -543,10 +190,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
   </div>
   <div class="gold-stripe"></div>
 
-  <!-- CONTENT -->
   <div class="content">
-
-    <!-- PROGRESS -->
     <div class="prog" id="prog-wrap">
       <div class="prog-top">
         <span class="prog-sec" id="psec">Section 1 of 4</span>
@@ -555,14 +199,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <div class="prog-track"><div class="prog-fill" id="pfill"></div></div>
       <div class="prog-dots" id="pdots"></div>
     </div>
-
-    <!-- SEC LABELS -->
     <div class="sec-lbl" id="s1lbl"><div class="sec-lbl-num">1</div><span class="sec-lbl-text">About you</span><div class="sec-lbl-line"></div></div>
     <div class="sec-lbl" id="s2lbl"><div class="sec-lbl-num">2</div><span class="sec-lbl-text">Bike share</span><div class="sec-lbl-line"></div></div>
     <div class="sec-lbl" id="s3lbl"><div class="sec-lbl-num">3</div><span class="sec-lbl-text">EVs &amp; Charging</span><div class="sec-lbl-line"></div></div>
     <div class="sec-lbl" id="s4lbl"><div class="sec-lbl-num">4</div><span class="sec-lbl-text">CapMetro &amp; Equity</span><div class="sec-lbl-line"></div></div>
 
-    <!-- Q1 -->
     <div class="card" id="q1">
       <div class="qtag"><span class="qnum">Q1</span><span class="qtype">single select</span></div>
       <div class="qtxt">What is your primary role at HT?</div>
@@ -573,8 +214,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="opt" data-v="staff" onclick="pick(this,'q1')"><div class="dot"></div>Staff</div>
       </div>
     </div>
-
-    <!-- Q2 -->
     <div class="card" id="q2">
       <div class="qtag"><span class="qnum">Q2</span><span class="qtype">single select</span></div>
       <div class="qtxt">What is your approximate one-way commute distance to HT?</div>
@@ -586,8 +225,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="opt" data-v="over30" onclick="pick(this,'q2')"><div class="dot"></div>Over 30 miles</div>
       </div>
     </div>
-
-    <!-- Q3 -->
     <div class="card" id="q3">
       <div class="qtag"><span class="qnum">Q3</span><span class="qtype">single select</span></div>
       <div class="qtxt">Were you aware that HT has a bike share program on campus?</div>
@@ -597,8 +234,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="opt" data-v="no" onclick="pick(this,'q3')"><div class="dot"></div>No — I had no idea!</div>
       </div>
     </div>
-
-    <!-- Q4 -->
     <div class="card" id="q4">
       <div class="qtag"><span class="qnum">Q4</span><span class="qtype">multi-select</span></div>
       <div class="qtxt">What has stopped you from using the campus bike share?</div>
@@ -615,8 +250,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="pill" data-v="nothing" onclick="mp(this,'q4')">No issues — I use it fine</div>
       </div>
     </div>
-
-    <!-- Q5 -->
     <div class="card" id="q5">
       <div class="qtag"><span class="qnum">Q5</span><span class="qtype">multi-select</span></div>
       <div class="qtxt">What improvements would make you more likely to use the bike share?</div>
@@ -631,8 +264,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="pill" data-v="shade" onclick="mp(this,'q5')">Shaded docking spots</div>
       </div>
     </div>
-
-    <!-- Q6 -->
     <div class="card" id="q6">
       <div class="qtag"><span class="qnum">Q6</span><span class="qtype">single select</span></div>
       <div class="qtxt">What is your current relationship with electric vehicles?</div>
@@ -645,8 +276,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="opt" data-v="not_interested" onclick="pick(this,'q6')"><div class="dot"></div>Not interested in EVs</div>
       </div>
     </div>
-
-    <!-- Q7 -->
     <div class="card" id="q7">
       <div class="qtag"><span class="qnum">Q7</span><span class="qtype">single select</span></div>
       <div class="qtxt">If you own or are considering an EV — where do you currently charge, or expect to?</div>
@@ -659,8 +288,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       </div>
       <div id="rent-co" style="display:none" class="co co-gold"><strong>Renter charging gap</strong>Many renters can't install home chargers — making campus or public charging essential for equitable EV adoption.</div>
     </div>
-
-    <!-- Q8 -->
     <div class="card" id="q8">
       <div class="qtag"><span class="qnum">Q8</span><span class="qtype">scale 1–5</span></div>
       <div class="qtxt">How significant is the lack of EV charging on the HT campus as a barrier to EV adoption?</div>
@@ -673,8 +300,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       </div>
       <div id="ev-co" style="display:none" class="co co-maroon"><strong>Your response helps</strong>We're proposing at least one Level 2 EV charger on campus. Strong responses here strengthen our case to HT administration.</div>
     </div>
-
-    <!-- Q9 -->
     <div class="card" id="q9">
       <div class="qtag"><span class="qnum">Q9</span><span class="qtype">multi-select</span></div>
       <div class="qtxt">What are the biggest barriers to EV adoption for you or people you know?</div>
@@ -690,8 +315,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="pill" data-v="none" onclick="mp(this,'q9')">No barriers — I'm EV-ready</div>
       </div>
     </div>
-
-    <!-- Q10 -->
     <div class="card" id="q10">
       <div class="qtag"><span class="qnum">Q10</span><span class="qtype">single select</span></div>
       <div class="qtxt">How often do you use CapMetro for your HT commute?</div>
@@ -703,8 +326,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="opt" data-v="never" onclick="pick(this,'q10')"><div class="dot"></div>Never</div>
       </div>
     </div>
-
-    <!-- Q11 -->
     <div class="card" id="q11">
       <div class="qtag"><span class="qnum">Q11</span><span class="qtype">multi-select</span></div>
       <div class="qtxt">What would make you more likely to use CapMetro for your HT commute?</div>
@@ -719,8 +340,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="pill" data-v="no_change" onclick="mp(this,'q11')">Transit isn't for me</div>
       </div>
     </div>
-
-    <!-- Q12 -->
     <div class="card" id="q12">
       <div class="qtag"><span class="qnum">Q12</span><span class="qtype">multi-select</span></div>
       <div class="qtxt">Which of these statements resonate with you?</div>
@@ -734,16 +353,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <div class="pill" data-v="unaware_incentives" onclick="mp(this,'q12')">I'm not aware of any EV incentives or rebates</div>
       </div>
     </div>
+  </div>
 
-  </div><!-- end .content -->
-
-  <!-- NAV -->
   <div class="nav" id="navbar">
     <button class="btn btn-b" id="bbtn" onclick="back()" style="visibility:hidden">← Back</button>
     <button class="btn btn-n" id="nbtn" onclick="next()">Next →</button>
   </div>
 
-  <!-- THANK YOU -->
   <div class="ty" id="ty">
     <div class="ty-header">
       <span class="ty-ic">🎉</span>
@@ -762,67 +378,59 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
         <strong>📣 Help us hit 100 responses</strong>
         <p>Share this with classmates and colleagues. Every response strengthens our proposal to HT administration and our EVHybridNoire presentation.</p>
       </div>
-
       <div class="ty-share-row">
-
-        <!-- QR CODE -->
         <div class="ty-qr-wrap">
           <div class="ty-qr-label">Scan to open</div>
           <div class="ty-qr-box">
-     <img src="qr-code.png" style="width:100%;height:100%;object-fit:contain;border-radius:8px">
-   </div>
-          <div class="ty-qr-sub">Replace placeholder<br>with your actual QR</div>
+            <img src="qr-code.png" alt="QR code">
+          </div>
+          <div class="ty-qr-sub">Replace with<br>your actual QR</div>
         </div>
-
-        <!-- SHARE ACTIONS -->
         <div class="ty-actions">
-
-          <!-- Link copy -->
           <div class="ty-link-box">
             <div class="ty-link-label">Survey link</div>
             <div class="ty-link-row">
               <div class="ty-link-url" id="share-url">https://ht-evhybrid-capstone.netlify.app/</div>
-              <button class="ty-copy-btn" onclick="copyLink()" id="copy-btn">
-                <span id="copy-icon">⎘</span>
-              </button>
+              <button class="ty-copy-btn" onclick="copyLink()" id="copy-btn"><span id="copy-icon">⎘</span></button>
             </div>
-            <div class="ty-link-hint">Replace with your Netlify / hosted URL</div>
+            <div class="ty-link-hint">Replace with your live URL</div>
           </div>
-
-          <!-- Share buttons -->
           <div class="ty-btns">
-            <a class="ty-share-btn ty-share-wa" href="https://wa.me/?text=Hey!%20Take%20this%20quick%203-min%20survey%20for%20HT%27s%20e-mobility%20capstone%20research%20%F0%9F%9A%97%E2%9C%A8%20https://ht-evhybrid-capstone.netlify.app/" target="_blank">
-              <span class="ty-share-btn-icon">💬</span>WhatsApp
-            </a>
-            <a class="ty-share-btn ty-share-sms" href="sms:?body=Hey!%20Quick%203-min%20survey%20for%20HT%27s%20e-mobility%20research%20%E2%80%94%20https://ht-evhybrid-capstone.netlify.app/">
-              <span class="ty-share-btn-icon">📱</span>Text
-            </a>
-            <a class="ty-share-btn ty-share-ig" href="#" onclick="copyLink();alert('Link copied! Paste it in your Instagram story or bio.');return false;">
-              <span class="ty-share-btn-icon">📸</span>Instagram
-            </a>
-            <button class="ty-share-btn ty-share-more" onclick="nativeShare()">
-              <span class="ty-share-btn-icon">⤴</span>More
-            </button>
+            <a class="ty-share-btn ty-share-wa" href="https://wa.me/?text=Hey!%20Take%20this%20quick%203-min%20survey%20for%20HT%27s%20e-mobility%20capstone%20research%20%F0%9F%9A%97%E2%9C%A8%20https://ht-evhybrid-capstone.netlify.app/" target="_blank"><span class="ty-share-btn-icon">💬</span>WhatsApp</a>
+            <a class="ty-share-btn ty-share-sms" href="sms:?body=Hey!%20Quick%203-min%20survey%20for%20HT%27s%20e-mobility%20research%20%E2%80%94%20https://ht-evhybrid-capstone.netlify.app/"><span class="ty-share-btn-icon">📱</span>Text</a>
+            <a class="ty-share-btn ty-share-ig" href="#" onclick="copyLink();alert('Link copied! Paste it in your Instagram story or bio.');return false;"><span class="ty-share-btn-icon">📸</span>Instagram</a>
+            <button class="ty-share-btn ty-share-more" onclick="nativeShare()"><span class="ty-share-btn-icon">⤴</span>More</button>
           </div>
-
         </div>
       </div>
     </div>
   </div>
-
-</div><!-- end .wrap -->
+</div>
 
 <script>
+const FID='xwvwkqpk';
+const SURVEY_URL='https://ht-evhybrid-capstone.netlify.app/';
+
 const A={q1:null,q2:null,q3:null,q4:[],q5:[],q6:null,q7:null,q8:null,q9:[],q10:null,q11:[],q12:[]};
 const QS=['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10','q11','q12'];
 const SECS=[
-  {name:'About you',       qs:['q1','q2'],         lbl:'s1lbl'},
-  {name:'Bike share',      qs:['q3','q4','q5'],     lbl:'s2lbl'},
-  {name:'EVs & charging',  qs:['q6','q7','q8','q9'],lbl:'s3lbl'},
-  {name:'CapMetro & equity',qs:['q10','q11','q12'], lbl:'s4lbl'},
+  {name:'About you',        qs:['q1','q2'],          lbl:'s1lbl'},
+  {name:'Bike share',       qs:['q3','q4','q5'],      lbl:'s2lbl'},
+  {name:'EVs & charging',   qs:['q6','q7','q8','q9'], lbl:'s3lbl'},
+  {name:'CapMetro & equity',qs:['q10','q11','q12'],   lbl:'s4lbl'},
 ];
-let cur=0, total=Math.floor(Math.random()*22)+6;
+let cur=0;
 
+// Populate share URL
+document.getElementById('share-url').textContent = SURVEY_URL;
+document.querySelectorAll('.ty-share-wa').forEach(el => {
+  el.href = `https://wa.me/?text=Hey!%20Take%20this%20quick%203-min%20survey%20for%20HT%27s%20e-mobility%20capstone%20research%20%F0%9F%9A%97%E2%9C%A8%20${encodeURIComponent(SURVEY_URL)}`;
+});
+document.querySelectorAll('.ty-share-sms').forEach(el => {
+  el.href = `sms:?body=Hey!%20Quick%203-min%20survey%20for%20HT%27s%20e-mobility%20research%20%E2%80%94%20${encodeURIComponent(SURVEY_URL)}`;
+});
+
+// Build progress dots
 const dd=document.getElementById('pdots');
 QS.forEach((_,i)=>{const d=document.createElement('div');d.className='pd';d.id='pd'+i;dd.appendChild(d);});
 
@@ -830,6 +438,21 @@ function secOf(idx){
   const qid=QS[idx];
   for(let i=0;i<SECS.length;i++) if(SECS[i].qs.includes(qid)) return i;
   return 0;
+}
+
+// ── SCROLL FIX: scroll to the card itself, not page top ──
+function scrollToCard(id){
+  const card = document.getElementById(id);
+  const secId = QS.indexOf(id);
+  // find if there's a section label above this card
+  const si = secOf(secId);
+  const sec = SECS[si];
+  const isFirstInSec = sec.qs[0] === id;
+  const target = isFirstInSec ? document.getElementById(sec.lbl) : card;
+  if(!target) return;
+  const offset = 12; // small breathing room above the card
+  const top = target.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({top, behavior:'smooth'});
 }
 
 function show(idx){
@@ -841,9 +464,9 @@ function show(idx){
   SECS.forEach(s=>{document.getElementById(s.lbl).style.display='none';});
   const si=secOf(idx);
   const sec=SECS[si];
-  if(idx===0||!sec.qs.includes(QS[idx-1])){
-    const lbl=document.getElementById(sec.lbl);
-    lbl.style.display='flex';
+  const isFirstInSec = sec.qs[0]===QS[idx];
+  if(idx===0||isFirstInSec){
+    document.getElementById(sec.lbl).style.display='flex';
   }
   const el=document.getElementById(QS[idx]);
   el.classList.add('on','active');
@@ -856,7 +479,8 @@ function show(idx){
   const nb=document.getElementById('nbtn');
   nb.textContent=isLast?'Submit ✓':'Next →';
   nb.className=isLast?'btn btn-s':'btn btn-n';
-  window.scrollTo({top:0,behavior:'smooth'});
+  // scroll to the card (not page top)
+  setTimeout(()=>scrollToCard(QS[idx]), 50);
 }
 
 function pick(el,qid){
@@ -866,13 +490,11 @@ function pick(el,qid){
   document.getElementById(qid).classList.add('done');
   if(qid==='q7') document.getElementById('rent-co').style.display=el.dataset.v==='home_rent'?'block':'none';
 }
-
 function mp(el,qid){
   el.classList.toggle('sel');
   A[qid]=[...document.querySelectorAll('#'+qid+'o .sel')].map(o=>o.dataset.v);
   document.getElementById(qid).classList.add('done');
 }
-
 function ep(el,qid){
   document.querySelectorAll('#'+qid+'o .eb').forEach(o=>o.classList.remove('sel'));
   el.classList.add('sel');
@@ -884,17 +506,34 @@ function ep(el,qid){
 function next(){if(cur===QS.length-1){submit();return;}cur++;show(cur);}
 function back(){if(cur>0){cur--;show(cur);}}
 
+// ── FORMSPREE SUBMISSION COUNT ──
+async function fetchCount(){
+  try{
+    const res = await fetch(`https://formspree.io/f/${FID}`,{
+      headers:{'Accept':'application/json'}
+    });
+    if(res.ok){
+      const data = await res.json();
+      // Formspree returns submission_count on the form object
+      if(data.submission_count !== undefined){
+        document.getElementById('sn-ct').textContent = data.submission_count;
+      }
+    }
+  } catch(e){
+    // silently fail — count stays as submitted value
+  }
+}
+
 function submit(){
-  total++;
   document.getElementById('prog-wrap').style.display='none';
   document.querySelectorAll('.sec-lbl').forEach(s=>s.style.display='none');
-  document.getElementById('q'+QS[cur].slice(1)).classList.remove('on');
   QS.forEach(id=>document.getElementById(id).style.display='none');
   document.querySelector('.content').style.padding='0';
   document.getElementById('navbar').style.display='none';
   document.getElementById('ty').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
 
-  document.getElementById('sn-ct').textContent=total;
+  // Set local stats immediately
   const ev=A.q8?parseInt(A.q8):0;
   document.getElementById('sn-ev').textContent=ev>=4?'High':ev>=3?'Moderate':ev>0?'Low':'—';
   const bkMap={website:'Website',no_docks:'Docking',no_bikes:'Availability',unaware:'Awareness',heat:'Heat'};
@@ -903,51 +542,44 @@ function submit(){
   const evbMap={cost:'Cost',no_charging:'No charging',renting:'Renting gap',range:'Range anxiety'};
   const teb=['cost','no_charging','renting','range'].find(b=>A.q9.includes(b));
   document.getElementById('sn-evb').textContent=teb?evbMap[teb]:'Varied';
+  document.getElementById('sn-ct').textContent='...';
 
-  const FID='xwvwkqpk';
+  // Submit to Formspree then fetch real count
   fetch(`https://formspree.io/f/${FID}`,{
-    method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
     body:JSON.stringify({
-      role:A.q1,commute:A.q2,
-      bike_aware:A.q3,bike_barriers:A.q4.join(', '),bike_improvements:A.q5.join(', '),
-      ev_status:A.q6,charge_location:A.q7,ev_barrier_severity:A.q8,ev_barriers:A.q9.join(', '),
-      capmetro_freq:A.q10,capmetro_improvements:A.q11.join(', '),
+      role:A.q1, commute:A.q2,
+      bike_aware:A.q3, bike_barriers:A.q4.join(', '), bike_improvements:A.q5.join(', '),
+      ev_status:A.q6, charge_location:A.q7, ev_barrier_severity:A.q8, ev_barriers:A.q9.join(', '),
+      capmetro_freq:A.q10, capmetro_improvements:A.q11.join(', '),
       equity_statements:A.q12.join(', '),
       submitted_at:new Date().toISOString()
     })
+  })
+  .then(r=>r.json())
+  .then(()=>{ fetchCount(); })
+  .catch(()=>{ document.getElementById('sn-ct').textContent='—'; });
+}
+
+function copyLink(){
+  const url=SURVEY_URL;
+  navigator.clipboard.writeText(url).catch(()=>{
+    const el=document.createElement('textarea');
+    el.value=url;document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);
   });
+  const btn=document.getElementById('copy-btn');
+  const icon=document.getElementById('copy-icon');
+  btn.classList.add('copied');icon.textContent='✓';
+  setTimeout(()=>{btn.classList.remove('copied');icon.textContent='⎘';},2000);
+}
+function nativeShare(){
+  if(navigator.share){
+    navigator.share({title:'HT E-Mobility Survey',text:'Quick 3-min survey for HT\'s e-mobility capstone research 🚗⚡',url:SURVEY_URL}).catch(()=>{});
+  } else { copyLink(); alert('Link copied!'); }
 }
 
 show(0);
-
-function copyLink(){
-  const url = document.getElementById('share-url').textContent;
-  navigator.clipboard.writeText(url).catch(()=>{
-    const el = document.createElement('textarea');
-    el.value = url; document.body.appendChild(el);
-    el.select(); document.execCommand('copy');
-    document.body.removeChild(el);
-  });
-  const btn = document.getElementById('copy-btn');
-  const icon = document.getElementById('copy-icon');
-  btn.classList.add('copied');
-  icon.textContent = '✓';
-  setTimeout(()=>{ btn.classList.remove('copied'); icon.textContent = '⎘'; }, 2000);
-}
-
-function nativeShare(){
-  const url = document.getElementById('share-url').textContent;
-  if(navigator.share){
-    navigator.share({
-      title: 'HT E-Mobility Survey',
-      text: 'Quick 3-min survey for HT\'s e-mobility capstone research 🚗⚡ Help us hit 100 responses!',
-      url: url
-    }).catch(()=>{});
-  } else {
-    copyLink();
-    alert('Link copied to clipboard!');
-  }
-}
 </script>
 </body>
 </html>
