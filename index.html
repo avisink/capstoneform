@@ -919,19 +919,18 @@ function submit(){
   const teb=['cost','no_charging','renting','range'].find(b=>A.q9.includes(b));
   document.getElementById('sn-evb').textContent=teb?evbMap[teb]:'Varied';
 
-  // TO ENABLE GOOGLE SHEETS: replace YOUR_FORM_ID with your Formspree ID from formspree.io
-  // const FID='YOUR_FORM_ID';
-  // fetch(`https://formspree.io/f/${FID}`,{
-  //   method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-  //   body:JSON.stringify({
-  //     role:A.q1,commute:A.q2,
-  //     bike_aware:A.q3,bike_barriers:A.q4.join(', '),bike_improvements:A.q5.join(', '),
-  //     ev_status:A.q6,charge_location:A.q7,ev_barrier_severity:A.q8,ev_barriers:A.q9.join(', '),
-  //     capmetro_freq:A.q10,capmetro_improvements:A.q11.join(', '),
-  //     equity_statements:A.q12.join(', '),
-  //     submitted_at:new Date().toISOString()
-  //   })
-  // });
+  const FID='xwvwkqpk';
+  fetch(`https://formspree.io/f/${FID}`,{
+    method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      role:A.q1,commute:A.q2,
+      bike_aware:A.q3,bike_barriers:A.q4.join(', '),bike_improvements:A.q5.join(', '),
+      ev_status:A.q6,charge_location:A.q7,ev_barrier_severity:A.q8,ev_barriers:A.q9.join(', '),
+      capmetro_freq:A.q10,capmetro_improvements:A.q11.join(', '),
+      equity_statements:A.q12.join(', '),
+      submitted_at:new Date().toISOString()
+    })
+  });
 }
 
 show(0);
