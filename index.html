@@ -1,976 +1,969 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HT E-Mobility Survey</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* HTU Maroon & Gold */
+  --maroon:#6B1A2A;
+  --maroon-mid:#8B2234;
+  --maroon-light:#F9F0F2;
+  --maroon-dark:#4A1020;
+  --maroon-deep:#2E0A15;
+  --gold:#C9991A;
+  --gold-mid:#E0B030;
+  --gold-light:#FDF6E3;
+  --gold-pale:#FEF9EE;
+  --gold-dark:#8A6600;
+  --ink:#1C1008;
+  --sub:#6B5C4E;
+  --muted:#9E8E82;
+  --bdr:#EDE3DC;
+  --bg:#FAF6F2;
+  --white:#FFFFFF;
+  --r:12px;
+  --sh:0 2px 8px rgba(107,26,42,.08);
+  --sh-lg:0 8px 32px rgba(107,26,42,.12);
+}
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-<meta charset="UTF-8">\
-<meta name="viewport" content="width=device-width, initial-scale=1.0">\
-<title>HT E-Mobility Survey</title>\
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">\
-<style>\
-*\{box-sizing:border-box;margin:0;padding:0\}\
-:root\{\
-  /* HTU Maroon & Gold */\
-  --maroon:#6B1A2A;\
-  --maroon-mid:#8B2234;\
-  --maroon-light:#F9F0F2;\
-  --maroon-dark:#4A1020;\
-  --maroon-deep:#2E0A15;\
-  --gold:#C9991A;\
-  --gold-mid:#E0B030;\
-  --gold-light:#FDF6E3;\
-  --gold-pale:#FEF9EE;\
-  --gold-dark:#8A6600;\
-  --ink:#1C1008;\
-  --sub:#6B5C4E;\
-  --muted:#9E8E82;\
-  --bdr:#EDE3DC;\
-  --bg:#FAF6F2;\
-  --white:#FFFFFF;\
-  --r:12px;\
-  --sh:0 2px 8px rgba(107,26,42,.08);\
-  --sh-lg:0 8px 32px rgba(107,26,42,.12);\
-\}\
-\
-body\{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased\}\
-.wrap\{max-width:600px;margin:0 auto;padding:0 0 100px\}\
-\
-/* \uc0\u9472 \u9472  HEADER \u9472 \u9472  */\
-.hdr\{position:relative;overflow:hidden;background:var(--maroon-deep);padding:0;margin-bottom:0\}\
-.hdr-inner\{padding:36px 28px 32px;position:relative;z-index:2\}\
-.hdr-geo\{position:absolute;inset:0;z-index:1;overflow:hidden\}\
-.hdr-geo::before\{\
-  content:'';position:absolute;\
-  top:-60px;right:-60px;\
-  width:260px;height:260px;\
-  border-radius:50%;\
-  border:40px solid rgba(201,153,26,.12);\
-\}\
-.hdr-geo::after\{\
-  content:'';position:absolute;\
-  bottom:-40px;left:-30px;\
-  width:180px;height:180px;\
-  border-radius:50%;\
-  border:30px solid rgba(255,255,255,.04);\
-\}\
-.hdr-geo-line\{\
-  position:absolute;top:0;right:80px;\
-  width:1px;height:100%;\
-  background:linear-gradient(to bottom,transparent,rgba(201,153,26,.2),transparent);\
-\}\
-\
-.hdr-eyebrow\{display:flex;align-items:center;gap:10px;margin-bottom:16px\}\
-.hdr-pill\{\
-  background:rgba(201,153,26,.2);\
-  border:1px solid rgba(201,153,26,.35);\
-  color:var(--gold-mid);\
-  border-radius:20px;padding:4px 12px;\
-  font-size:11px;font-weight:600;letter-spacing:.5px;\
-\}\
-.hdr-dot\{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25)\}\
-.hdr-tag\{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1px;text-transform:uppercase\}\
-\
-.hdr h1\{\
-  font-family:'Playfair Display',serif;\
-  font-size:28px;font-weight:900;\
-  color:#fff;line-height:1.2;\
-  margin-bottom:12px;\
-  letter-spacing:-.3px;\
-\}\
-.hdr h1 span\{color:var(--gold-mid)\}\
-.hdr-desc\{font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.65;max-width:440px;margin-bottom:20px\}\
-\
-.hdr-stats\{display:flex;flex-wrap:wrap;gap:8px\}\
-.hdr-stat\{\
-  background:rgba(255,255,255,.08);\
-  border:1px solid rgba(255,255,255,.12);\
-  border-radius:8px;\
-  padding:7px 13px;\
-  font-size:12px;color:rgba(255,255,255,.8);font-weight:500;\
-  display:flex;align-items:center;gap:6px;\
-\}\
-.hdr-stat-icon\{font-size:14px\}\
-\
-.consent-bar\{\
-  background:rgba(201,153,26,.08);\
-  border-top:1px solid rgba(201,153,26,.15);\
-  padding:10px 28px;\
-  font-size:11px;color:rgba(255,255,255,.38);\
-  line-height:1.5;font-style:italic;\
-  position:relative;z-index:2;\
-\}\
-\
-/* \uc0\u9472 \u9472  GOLD ACCENT STRIPE \u9472 \u9472  */\
-.gold-stripe\{\
-  height:4px;\
-  background:linear-gradient(90deg, var(--maroon-mid), var(--gold), var(--gold-mid), var(--maroon-mid));\
-  background-size:200% 100%;\
-  animation:shimmer 4s linear infinite;\
-\}\
-@keyframes shimmer\{0%\{background-position:200% 0\}100%\{background-position:-200% 0\}\}\
-\
-/* \uc0\u9472 \u9472  MAIN CONTENT AREA \u9472 \u9472  */\
-.content\{padding:20px 16px\}\
-\
-/* \uc0\u9472 \u9472  PROGRESS \u9472 \u9472  */\
-.prog\{\
-  background:var(--white);\
-  border:1px solid var(--bdr);\
-  border-radius:14px;\
-  padding:16px 18px;\
-  margin-bottom:20px;\
-  box-shadow:var(--sh);\
-\}\
-.prog-top\{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px\}\
-.prog-sec\{font-size:12px;font-weight:600;color:var(--maroon)\}\
-.prog-ct\{font-size:12px;color:var(--muted)\}\
-.prog-track\{height:6px;background:#EDE3DC;border-radius:6px;overflow:hidden;margin-bottom:10px\}\
-.prog-fill\{\
-  height:100%;\
-  background:linear-gradient(90deg,var(--maroon),var(--gold));\
-  border-radius:6px;\
-  transition:width .5s cubic-bezier(.4,0,.2,1);\
-  width:0%;\
-\}\
-.prog-dots\{display:flex;gap:4px\}\
-.pd\{flex:1;height:3px;border-radius:2px;background:#EDE3DC;transition:background .3s\}\
-.pd.done\{background:var(--maroon)\}\
-.pd.now\{background:var(--gold)\}\
-\
-/* \uc0\u9472 \u9472  SECTION LABEL \u9472 \u9472  */\
-.sec-lbl\{\
-  display:none;\
-  align-items:center;gap:10px;\
-  margin-bottom:14px;\
-\}\
-.sec-lbl-num\{\
-  background:var(--maroon);color:#fff;\
-  width:26px;height:26px;border-radius:6px;\
-  font-size:11px;font-weight:700;\
-  display:flex;align-items:center;justify-content:center;\
-  font-family:'Playfair Display',serif;\
-\}\
-.sec-lbl-text\{font-size:12px;font-weight:600;color:var(--maroon);letter-spacing:.5px;text-transform:uppercase\}\
-.sec-lbl-line\{flex:1;height:1px;background:linear-gradient(90deg,var(--bdr),transparent)\}\
-\
-/* \uc0\u9472 \u9472  CARD \u9472 \u9472  */\
-.card\{\
-  background:var(--white);\
-  border:1.5px solid var(--bdr);\
-  border-radius:16px;\
-  padding:24px 22px;\
-  margin-bottom:12px;\
-  box-shadow:var(--sh);\
-  display:none;\
-  transition:border-color .25s,box-shadow .25s,transform .15s;\
-  animation:cardIn .25s ease;\
-\}\
-@keyframes cardIn\{from\{opacity:0;transform:translateY(6px)\}to\{opacity:1;transform:translateY(0)\}\}\
-.card.on\{display:block\}\
-.card.active\{\
-  border-color:var(--maroon-mid);\
-  box-shadow:0 0 0 3px rgba(107,26,42,.08),var(--sh);\
-\}\
-.card.done\{border-color:rgba(201,153,26,.5)\}\
-\
-.qtag\{display:flex;align-items:center;gap:8px;margin-bottom:10px\}\
-.qnum\{\
-  background:var(--maroon-light);color:var(--maroon);\
-  border-radius:6px;padding:3px 9px;\
-  font-size:11px;font-weight:700;letter-spacing:.5px;\
-\}\
-.qtype\{font-size:11px;color:var(--muted);background:#F5F1EE;border-radius:5px;padding:3px 8px\}\
-.qtxt\{font-size:16px;font-weight:600;line-height:1.5;margin-bottom:6px;color:var(--ink)\}\
-.qwhy\{\
-  font-size:12.5px;color:var(--sub);margin-bottom:14px;\
-  padding:8px 12px;\
-  background:var(--gold-pale);\
-  border-left:3px solid var(--gold);\
-  border-radius:0 7px 7px 0;\
-  line-height:1.55;\
-\}\
-\
-/* \uc0\u9472 \u9472  SINGLE SELECT \u9472 \u9472  */\
-.opts\{display:flex;flex-direction:column;gap:8px\}\
-.opt\{\
-  display:flex;align-items:flex-start;gap:12px;\
-  padding:14px 16px;\
-  border:1.5px solid var(--bdr);\
-  border-radius:11px;\
-  cursor:pointer;\
-  font-size:15px;line-height:1.45;\
-  user-select:none;\
-  transition:border-color .15s,background .15s,transform .1s;\
-  -webkit-tap-highlight-color:transparent;\
-  position:relative;overflow:hidden;\
-\}\
-.opt::before\{\
-  content:'';position:absolute;inset:0;\
-  background:linear-gradient(135deg,rgba(201,153,26,.06),transparent);\
-  opacity:0;transition:opacity .15s;\
-\}\
-.opt:hover\{border-color:var(--gold);background:var(--gold-pale)\}\
-.opt:hover::before\{opacity:1\}\
-.opt:active\{transform:scale(.99)\}\
-.opt.sel\{\
-  border-color:var(--maroon);\
-  background:var(--maroon-light);\
-  font-weight:500;\
-\}\
-.dot\{\
-  width:20px;height:20px;min-width:20px;\
-  border-radius:50%;border:2px solid var(--bdr);\
-  display:flex;align-items:center;justify-content:center;\
-  margin-top:1px;transition:all .15s;\
-  flex-shrink:0;\
-\}\
-.opt.sel .dot\{border-color:var(--maroon);background:var(--maroon)\}\
-.opt.sel .dot::after\{content:'';width:7px;height:7px;border-radius:50%;background:#fff\}\
-.opt-sub\{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:3px\}\
-\
-/* \uc0\u9472 \u9472  PILLS \u9472 \u9472  */\
-.pills\{display:flex;flex-wrap:wrap;gap:8px\}\
-.pill\{\
-  padding:10px 16px;\
-  border:1.5px solid var(--bdr);\
-  border-radius:24px;\
-  font-size:13.5px;font-weight:500;\
-  cursor:pointer;\
-  transition:all .15s;\
-  user-select:none;\
-  -webkit-tap-highlight-color:transparent;\
-  color:var(--sub);\
-\}\
-.pill:hover\{border-color:var(--gold-mid);background:var(--gold-pale);color:var(--ink)\}\
-.pill:active\{transform:scale(.97)\}\
-.pill.sel\{\
-  border-color:var(--maroon);\
-  background:var(--maroon-light);\
-  color:var(--maroon-dark);\
-  font-weight:600;\
-\}\
-\
-/* \uc0\u9472 \u9472  EMOJI SCALE \u9472 \u9472  */\
-.esc\{display:flex;gap:6px\}\
-.eb\{\
-  flex:1;padding:14px 4px 12px;\
-  border:1.5px solid var(--bdr);\
-  border-radius:12px;\
-  text-align:center;cursor:pointer;\
-  transition:all .18s;\
-  user-select:none;\
-  -webkit-tap-highlight-color:transparent;\
-  min-height:74px;background:var(--white);\
-\}\
-.eb .ei\{font-size:26px;line-height:1;display:block\}\
-.eb .el\{display:block;font-size:10px;color:var(--muted);margin-top:6px;line-height:1.3;word-break:break-word\}\
-.eb:hover\{border-color:var(--gold);background:var(--gold-pale);transform:translateY(-3px);box-shadow:0 4px 12px rgba(201,153,26,.15)\}\
-.eb:active\{transform:translateY(0)\}\
-.eb.sel\{\
-  border-color:var(--maroon);\
-  background:var(--maroon-light);\
-  transform:translateY(-3px);\
-  box-shadow:0 4px 12px rgba(107,26,42,.15);\
-\}\
-.eb.sel .el\{color:var(--maroon)\}\
-\
-/* \uc0\u9472 \u9472  CALLOUT \u9472 \u9472  */\
-.co\{border-radius:10px;padding:13px 15px;font-size:13px;line-height:1.65;margin-top:14px\}\
-.co-gold\{background:var(--gold-pale);border-left:3px solid var(--gold);color:var(--gold-dark)\}\
-.co-maroon\{background:var(--maroon-light);border-left:3px solid var(--maroon);color:var(--maroon-dark)\}\
-.co strong\{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;font-weight:700\}\
-\
-/* \uc0\u9472 \u9472  STICKY NAV \u9472 \u9472  */\
-.nav\{\
-  position:sticky;bottom:0;\
-  background:rgba(250,246,242,.96);\
-  backdrop-filter:blur(12px);\
-  -webkit-backdrop-filter:blur(12px);\
-  padding:14px 16px 10px;\
-  display:flex;justify-content:space-between;align-items:center;\
-  border-top:1px solid var(--bdr);\
-  gap:10px;\
-\}\
-.btn\{\
-  padding:14px 28px;border-radius:11px;\
-  font-size:15px;font-weight:600;\
-  cursor:pointer;border:none;\
-  font-family:'Plus Jakarta Sans',sans-serif;\
-  transition:all .2s;\
-  min-height:50px;\
-  letter-spacing:.1px;\
-  -webkit-tap-highlight-color:transparent;\
-\}\
-.btn-b\{\
-  background:var(--white);\
-  border:1.5px solid var(--bdr);\
-  color:var(--sub);\
-  min-width:90px;\
-\}\
-.btn-b:hover\{border-color:var(--maroon-mid);color:var(--maroon)\}\
-.btn-n\{\
-  background:var(--maroon);color:#fff;\
-  box-shadow:0 4px 14px rgba(107,26,42,.3);\
-  flex:1;max-width:260px;\
-\}\
-.btn-n:hover\{background:var(--maroon-mid);transform:translateY(-1px);box-shadow:0 6px 20px rgba(107,26,42,.35)\}\
-.btn-n:active\{transform:translateY(0)\}\
-.btn-s\{\
-  background:linear-gradient(135deg,var(--maroon-dark),var(--maroon));\
-  color:#fff;\
-  box-shadow:0 4px 14px rgba(107,26,42,.35);\
-  flex:1;max-width:260px;\
-  position:relative;overflow:hidden;\
-\}\
-.btn-s::after\{\
-  content:'';position:absolute;\
-  top:-50%;left:-50%;width:200%;height:200%;\
-  background:linear-gradient(45deg,transparent 40%,rgba(201,153,26,.15) 50%,transparent 60%);\
-  transform:translateX(-100%);\
-\}\
-.btn-s:hover::after\{transform:translateX(100%);transition:transform .5s\}\
-.btn-s:hover\{transform:translateY(-1px);box-shadow:0 6px 20px rgba(107,26,42,.4)\}\
-\
-/* \uc0\u9472 \u9472  THANK YOU \u9472 \u9472  */\
-.ty\{display:none;padding:40px 16px 60px;text-align:center\}\
-.ty-header\{\
-  background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));\
-  border-radius:20px;padding:36px 24px;\
-  margin-bottom:20px;position:relative;overflow:hidden;\
-\}\
-.ty-header::before\{\
-  content:'';position:absolute;\
-  top:-40px;right:-40px;width:200px;height:200px;\
-  border-radius:50%;border:35px solid rgba(201,153,26,.15);\
-\}\
-@keyframes popIn\{from\{transform:scale(.3);opacity:0\}to\{transform:scale(1);opacity:1\}\}\
-.ty-ic\{font-size:52px;margin-bottom:14px;animation:popIn .4s cubic-bezier(.175,.885,.32,1.275);display:block\}\
-.ty h2\{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#fff;margin-bottom:8px\}\
-.ty-sub\{color:rgba(255,255,255,.72);font-size:14px;line-height:1.65;max-width:380px;margin:0 auto\}\
-\
-.ty-grid\{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px\}\
-.ty-c\{\
-  background:var(--white);border:1px solid var(--bdr);\
-  border-radius:13px;padding:16px;\
-  box-shadow:var(--sh);text-align:left;\
-\}\
-.ty-cl\{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px\}\
-.ty-cv\{font-size:22px;font-weight:700;color:var(--maroon);font-family:'Playfair Display',serif\}\
-.ty-cs\{font-size:11px;color:var(--muted);margin-top:3px\}\
-\
-.ty-share\{\
-  background:linear-gradient(135deg,var(--gold-pale),var(--maroon-light));\
-  border:1px solid var(--bdr);\
-  border-radius:13px;padding:18px;\
-  font-size:13.5px;color:var(--ink);line-height:1.65;text-align:left;\
-\}\
-.ty-share strong\{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;color:var(--maroon);font-weight:700\}\
-\
-/* \uc0\u9472 \u9472  SHARE BLOCK \u9472 \u9472  */\
-.ty-share-block\{\
-  background:var(--white);\
-  border:1px solid var(--bdr);\
-  border-radius:16px;\
-  overflow:hidden;\
-  box-shadow:var(--sh);\
-\}\
-.ty-share-header\{\
-  background:linear-gradient(135deg,var(--maroon-light),var(--gold-pale));\
-  padding:16px 18px 14px;\
-  border-bottom:1px solid var(--bdr);\
-\}\
-.ty-share-header strong\{\
-  display:block;font-size:13px;font-weight:700;\
-  color:var(--maroon);margin-bottom:4px;\
-  text-transform:uppercase;letter-spacing:.8px;\
-\}\
-.ty-share-header p\{font-size:13px;color:var(--sub);line-height:1.55\}\
-\
-.ty-share-row\{\
-  display:flex;gap:0;\
-  align-items:stretch;\
-\}\
-\
-/* QR */\
-.ty-qr-wrap\{\
-  padding:18px 16px;\
-  border-right:1px solid var(--bdr);\
-  display:flex;flex-direction:column;\
-  align-items:center;gap:10px;\
-  background:#FAFAF8;\
-  min-width:130px;\
-\}\
-.ty-qr-label\{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)\}\
-.ty-qr-box\{\
-  width:100px;height:100px;\
-  border:2px solid var(--maroon);\
-  border-radius:10px;\
-  background:#fff;\
-  position:relative;overflow:hidden;\
-  display:flex;align-items:center;justify-content:center;\
-\}\
-.qr-inner\{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center\}\
-.qr-corner\{\
-  position:absolute;\
-  width:22px;height:22px;\
-  border:3px solid var(--maroon);\
-\}\
-.qr-tl\{top:6px;left:6px;border-right:none;border-bottom:none;border-radius:3px 0 0 0\}\
-.qr-tr\{top:6px;right:6px;border-left:none;border-bottom:none;border-radius:0 3px 0 0\}\
-.qr-bl\{bottom:6px;left:6px;border-right:none;border-top:none;border-radius:0 0 0 3px\}\
-.qr-grid\{\
-  display:grid;\
-  grid-template-columns:repeat(6,7px);\
-  grid-template-rows:repeat(5,7px);\
-  gap:2px;\
-  opacity:.35;\
-\}\
-.qr-dot\{width:7px;height:7px;background:var(--maroon);border-radius:1px\}\
-.qr-replace-note\{\
-  position:absolute;inset:0;\
-  background:rgba(255,255,255,.88);\
-  display:flex;align-items:center;justify-content:center;\
-  font-size:9px;font-weight:700;color:var(--maroon);\
-  text-align:center;line-height:1.4;\
-  letter-spacing:.3px;\
-  border-radius:8px;\
-\}\
-.ty-qr-sub\{font-size:10px;color:var(--muted);text-align:center;line-height:1.4\}\
-\
-/* Actions */\
-.ty-actions\{flex:1;padding:16px;display:flex;flex-direction:column;gap:12px\}\
-\
-.ty-link-box\{\
-  background:#F9F5F1;border:1px solid var(--bdr);\
-  border-radius:10px;padding:12px 13px;\
-\}\
-.ty-link-label\{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:7px\}\
-.ty-link-row\{display:flex;gap:8px;align-items:center\}\
-.ty-link-url\{\
-  flex:1;font-size:12px;color:var(--maroon);\
-  font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;\
-  background:var(--white);border:1px solid var(--bdr);\
-  border-radius:7px;padding:7px 10px;\
-  font-family:monospace;\
-\}\
-.ty-copy-btn\{\
-  background:var(--maroon);color:#fff;\
-  border:none;border-radius:7px;\
-  width:34px;height:34px;\
-  font-size:16px;cursor:pointer;\
-  display:flex;align-items:center;justify-content:center;\
-  flex-shrink:0;transition:all .15s;\
-  -webkit-tap-highlight-color:transparent;\
-\}\
-.ty-copy-btn:hover\{background:var(--maroon-mid)\}\
-.ty-copy-btn.copied\{background:var(--gold-dark)\}\
-.ty-link-hint\{font-size:10px;color:var(--muted);margin-top:6px;font-style:italic\}\
-\
-.ty-btns\{display:grid;grid-template-columns:1fr 1fr;gap:7px\}\
-.ty-share-btn\{\
-  display:flex;align-items:center;justify-content:center;gap:6px;\
-  padding:10px 8px;border-radius:9px;\
-  font-size:12.5px;font-weight:600;\
-  cursor:pointer;border:1.5px solid var(--bdr);\
-  text-decoration:none;color:var(--ink);\
-  background:var(--white);\
-  transition:all .15s;\
-  -webkit-tap-highlight-color:transparent;\
-  font-family:'Plus Jakarta Sans',sans-serif;\
-\}\
-.ty-share-btn:hover\{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)\}\
-.ty-share-btn-icon\{font-size:15px\}\
-.ty-share-wa\{border-color:#25D366;color:#128C7E\}\
-.ty-share-wa:hover\{background:#f0fff4;border-color:#25D366\}\
-.ty-share-sms\{border-color:var(--gold);color:var(--gold-dark)\}\
-.ty-share-sms:hover\{background:var(--gold-pale);border-color:var(--gold)\}\
-.ty-share-ig\{border-color:#E1306C;color:#C13584\}\
-.ty-share-ig:hover\{background:#fff0f5;border-color:#E1306C\}\
-.ty-share-more\{border-color:var(--maroon);color:var(--maroon)\}\
-.ty-share-more:hover\{background:var(--maroon-light);border-color:var(--maroon)\}\
-\
-/* \uc0\u9472 \u9472  MOBILE \u9472 \u9472  */\
-@media(max-width:480px)\{\
-  .hdr-inner\{padding:28px 18px 24px\}\
-  .hdr h1\{font-size:23px\}\
-  .content\{padding:16px 12px\}\
-  .card\{padding:20px 16px\}\
-  .qtxt\{font-size:15px\}\
-  .opt\{padding:13px 13px\}\
-  .pill\{padding:10px 14px;font-size:13px\}\
-  .esc\{gap:4px\}\
-  .eb\{padding:12px 2px 10px;min-height:68px\}\
-  .eb .ei\{font-size:22px\}\
-  .btn\{padding:13px 20px;font-size:14px\}\
-  .hdr-stat\{font-size:11px;padding:6px 10px\}\
-  .consent-bar\{padding:10px 18px\}\
-  .prog\{padding:13px 14px\}\
-  .ty-share-row\{flex-direction:column\}\
-  .ty-qr-wrap\{border-right:none;border-bottom:1px solid var(--bdr);flex-direction:row;gap:14px;align-items:center;padding:14px 16px\}\
-  .ty-qr-box\{width:72px;height:72px;min-width:72px\}\
-  .ty-qr-sub\{text-align:left\}\
-  .ty-btns\{grid-template-columns:1fr 1fr\}\
-\}\
-@media(max-width:360px)\{\
-  .hdr h1\{font-size:20px\}\
-  .eb .el\{display:none\}\
-  .ty-grid\{grid-template-columns:1fr\}\
-  .pill\{padding:9px 12px;font-size:12.5px\}\
-\}\
-</style>\
-</head>\
-<body>\
-<div class="wrap">\
-\
-  <!-- HEADER -->\
-  <div class="hdr">\
-    <div class="hdr-geo">\
-      <div class="hdr-geo-line"></div>\
-    </div>\
-    <div class="hdr-inner">\
-      <div class="hdr-eyebrow">\
-        <div class="hdr-pill">EVHybridNoire Research</div>\
-        <div class="hdr-dot"></div>\
-        <span class="hdr-tag">HT Capstone \'b7 Spring 2026</span>\
-      </div>\
-      <h1>Transportation &amp;<br><span>E-Mobility at HT</span></h1>\
-      <p class="hdr-desc">Help us understand how the HT campus community gets around \'97 and what it would take to make transportation greener and more accessible. Your answers directly shape our proposal to campus leadership.</p>\
-      <div class="hdr-stats">\
-        <div class="hdr-stat"><span class="hdr-stat-icon">\uc0\u55357 \u56523 </span>12 questions</div>\
-        <div class="hdr-stat"><span class="hdr-stat-icon">\uc0\u9201 </span>~3 minutes</div>\
-        <div class="hdr-stat"><span class="hdr-stat-icon">\uc0\u55357 \u56594 </span>100% anonymous</div>\
-      </div>\
-    </div>\
-    <div class="consent-bar">By completing this survey you consent to anonymized responses being used in academic research and a stakeholder presentation. No identifying information is collected.</div>\
-  </div>\
-  <div class="gold-stripe"></div>\
-\
-  <!-- CONTENT -->\
-  <div class="content">\
-\
-    <!-- PROGRESS -->\
-    <div class="prog" id="prog-wrap">\
-      <div class="prog-top">\
-        <span class="prog-sec" id="psec">Section 1 of 4</span>\
-        <span class="prog-ct" id="pct">Q1 of 12</span>\
-      </div>\
-      <div class="prog-track"><div class="prog-fill" id="pfill"></div></div>\
-      <div class="prog-dots" id="pdots"></div>\
-    </div>\
-\
-    <!-- SEC LABELS -->\
-    <div class="sec-lbl" id="s1lbl"><div class="sec-lbl-num">1</div><span class="sec-lbl-text">About you</span><div class="sec-lbl-line"></div></div>\
-    <div class="sec-lbl" id="s2lbl"><div class="sec-lbl-num">2</div><span class="sec-lbl-text">Bike share</span><div class="sec-lbl-line"></div></div>\
-    <div class="sec-lbl" id="s3lbl"><div class="sec-lbl-num">3</div><span class="sec-lbl-text">EVs &amp; Charging</span><div class="sec-lbl-line"></div></div>\
-    <div class="sec-lbl" id="s4lbl"><div class="sec-lbl-num">4</div><span class="sec-lbl-text">CapMetro &amp; Equity</span><div class="sec-lbl-line"></div></div>\
-\
-    <!-- Q1 -->\
-    <div class="card" id="q1">\
-      <div class="qtag"><span class="qnum">Q1</span><span class="qtype">single select</span></div>\
-      <div class="qtxt">What is your primary role at HT?</div>\
-      <div class="opts" id="q1o">\
-        <div class="opt" data-v="commuter" onclick="pick(this,'q1')"><div class="dot"></div><div>Student \'97 commuter<span class="opt-sub">You travel to campus from off-campus housing</span></div></div>\
-        <div class="opt" data-v="resident" onclick="pick(this,'q1')"><div class="dot"></div><div>Student \'97 on-campus resident<span class="opt-sub">You live in campus housing</span></div></div>\
-        <div class="opt" data-v="faculty" onclick="pick(this,'q1')"><div class="dot"></div>Faculty</div>\
-        <div class="opt" data-v="staff" onclick="pick(this,'q1')"><div class="dot"></div>Staff</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q2 -->\
-    <div class="card" id="q2">\
-      <div class="qtag"><span class="qnum">Q2</span><span class="qtype">single select</span></div>\
-      <div class="qtxt">What is your approximate one-way commute distance to HT?</div>\
-      <div class="opts" id="q2o">\
-        <div class="opt" data-v="oncampus" onclick="pick(this,'q2')"><div class="dot"></div>I live on campus</div>\
-        <div class="opt" data-v="under5" onclick="pick(this,'q2')"><div class="dot"></div>Under 5 miles</div>\
-        <div class="opt" data-v="5to15" onclick="pick(this,'q2')"><div class="dot"></div>5\'9615 miles</div>\
-        <div class="opt" data-v="15to30" onclick="pick(this,'q2')"><div class="dot"></div>15\'9630 miles</div>\
-        <div class="opt" data-v="over30" onclick="pick(this,'q2')"><div class="dot"></div>Over 30 miles</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q3 -->\
-    <div class="card" id="q3">\
-      <div class="qtag"><span class="qnum">Q3</span><span class="qtype">single select</span></div>\
-      <div class="qtxt">Were you aware that HT has a bike share program on campus?</div>\
-      <div class="opts" id="q3o">\
-        <div class="opt" data-v="yes_use" onclick="pick(this,'q3')"><div class="dot"></div>Yes \'97 and I use it</div>\
-        <div class="opt" data-v="yes_no" onclick="pick(this,'q3')"><div class="dot"></div>Yes \'97 but I've never used it</div>\
-        <div class="opt" data-v="no" onclick="pick(this,'q3')"><div class="dot"></div>No \'97 I had no idea!</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q4 -->\
-    <div class="card" id="q4">\
-      <div class="qtag"><span class="qnum">Q4</span><span class="qtype">multi-select</span></div>\
-      <div class="qtxt">What has stopped you from using the campus bike share?</div>\
-      <div class="qwhy">Select all that apply \'97 choose "No issues" if you use it without problems.</div>\
-      <div class="pills" id="q4o">\
-        <div class="pill" data-v="unaware" onclick="mp(this,'q4')">Didn't know about it</div>\
-        <div class="pill" data-v="no_bikes" onclick="mp(this,'q4')">Bikes not available</div>\
-        <div class="pill" data-v="website" onclick="mp(this,'q4')">Website / app broken</div>\
-        <div class="pill" data-v="no_docks" onclick="mp(this,'q4')">Not enough docking spots</div>\
-        <div class="pill" data-v="signup" onclick="mp(this,'q4')">Sign-up too complicated</div>\
-        <div class="pill" data-v="distance" onclick="mp(this,'q4')">Commute too far</div>\
-        <div class="pill" data-v="heat" onclick="mp(this,'q4')">Austin heat</div>\
-        <div class="pill" data-v="safety" onclick="mp(this,'q4')">Safety concerns</div>\
-        <div class="pill" data-v="nothing" onclick="mp(this,'q4')">No issues \'97 I use it fine</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q5 -->\
-    <div class="card" id="q5">\
-      <div class="qtag"><span class="qnum">Q5</span><span class="qtype">multi-select</span></div>\
-      <div class="qtxt">What improvements would make you more likely to use the bike share?</div>\
-      <div class="pills" id="q5o">\
-        <div class="pill" data-v="ebikes" onclick="mp(this,'q5')">Add e-bikes</div>\
-        <div class="pill" data-v="more_bikes" onclick="mp(this,'q5')">More bikes available</div>\
-        <div class="pill" data-v="better_app" onclick="mp(this,'q5')">Better app / website</div>\
-        <div class="pill" data-v="more_docks" onclick="mp(this,'q5')">More docking stations</div>\
-        <div class="pill" data-v="free" onclick="mp(this,'q5')">Make it free for students</div>\
-        <div class="pill" data-v="helmets" onclick="mp(this,'q5')">Helmets to borrow</div>\
-        <div class="pill" data-v="awareness" onclick="mp(this,'q5')">Better campus promotion</div>\
-        <div class="pill" data-v="shade" onclick="mp(this,'q5')">Shaded docking spots</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q6 -->\
-    <div class="card" id="q6">\
-      <div class="qtag"><span class="qnum">Q6</span><span class="qtype">single select</span></div>\
-      <div class="qtxt">What is your current relationship with electric vehicles?</div>\
-      <div class="opts" id="q6o">\
-        <div class="opt" data-v="own_ev" onclick="pick(this,'q6')"><div class="dot"></div>I own a fully electric vehicle</div>\
-        <div class="opt" data-v="own_hybrid" onclick="pick(this,'q6')"><div class="dot"></div>I own a hybrid vehicle</div>\
-        <div class="opt" data-v="planning" onclick="pick(this,'q6')"><div class="dot"></div>I plan to buy an EV in the next 1\'963 years</div>\
-        <div class="opt" data-v="open" onclick="pick(this,'q6')"><div class="dot"></div>I don't own one but I'm open to EVs</div>\
-        <div class="opt" data-v="no_car" onclick="pick(this,'q6')"><div class="dot"></div>I don't own a vehicle</div>\
-        <div class="opt" data-v="not_interested" onclick="pick(this,'q6')"><div class="dot"></div>Not interested in EVs</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q7 -->\
-    <div class="card" id="q7">\
-      <div class="qtag"><span class="qnum">Q7</span><span class="qtype">single select</span></div>\
-      <div class="qtxt">If you own or are considering an EV \'97 where do you currently charge, or expect to?</div>\
-      <div class="opts" id="q7o">\
-        <div class="opt" data-v="home_own" onclick="pick(this,'q7')"><div class="dot"></div>At home \'97 I own and have a dedicated charger</div>\
-        <div class="opt" data-v="home_rent" onclick="pick(this,'q7')"><div class="dot"></div><div>At home \'97 I rent, limited options<span class="opt-sub">A known equity gap in EV adoption</span></div></div>\
-        <div class="opt" data-v="public" onclick="pick(this,'q7')"><div class="dot"></div>Public charging stations nearby</div>\
-        <div class="opt" data-v="struggle" onclick="pick(this,'q7')"><div class="dot"></div>It's a real challenge \'97 very limited options</div>\
-        <div class="opt" data-v="na" onclick="pick(this,'q7')"><div class="dot"></div>Not applicable</div>\
-      </div>\
-      <div id="rent-co" style="display:none" class="co co-gold"><strong>Renter charging gap</strong>Many renters can't install home chargers \'97 making campus or public charging essential for equitable EV adoption.</div>\
-    </div>\
-\
-    <!-- Q8 -->\
-    <div class="card" id="q8">\
-      <div class="qtag"><span class="qnum">Q8</span><span class="qtype">scale 1\'965</span></div>\
-      <div class="qtxt">How significant is the lack of EV charging on the HT campus as a barrier to EV adoption?</div>\
-      <div class="esc" id="q8o">\
-        <div class="eb" data-v="1" onclick="ep(this,'q8')"><span class="ei">\uc0\u55357 \u56849 </span><span class="el">Not a barrier</span></div>\
-        <div class="eb" data-v="2" onclick="ep(this,'q8')"><span class="ei">\uc0\u55358 \u56631 </span><span class="el">Minor</span></div>\
-        <div class="eb" data-v="3" onclick="ep(this,'q8')"><span class="ei">\uc0\u55357 \u56876 </span><span class="el">Moderate</span></div>\
-        <div class="eb" data-v="4" onclick="ep(this,'q8')"><span class="ei">\uc0\u55357 \u56868 </span><span class="el">Significant</span></div>\
-        <div class="eb" data-v="5" onclick="ep(this,'q8')"><span class="ei">\uc0\u55357 \u57000 </span><span class="el">Critical</span></div>\
-      </div>\
-      <div id="ev-co" style="display:none" class="co co-maroon"><strong>Your response helps</strong>We're proposing at least one Level 2 EV charger on campus. Strong responses here strengthen our case to HT administration.</div>\
-    </div>\
-\
-    <!-- Q9 -->\
-    <div class="card" id="q9">\
-      <div class="qtag"><span class="qnum">Q9</span><span class="qtype">multi-select</span></div>\
-      <div class="qtxt">What are the biggest barriers to EV adoption for you or people you know?</div>\
-      <div class="qwhy">Answer even if you're not personally considering an EV \'97 this is a key research question for our EVHybridNoire presentation.</div>\
-      <div class="pills" id="q9o">\
-        <div class="pill" data-v="cost" onclick="mp(this,'q9')">High upfront cost</div>\
-        <div class="pill" data-v="no_charging" onclick="mp(this,'q9')">No charging at home or campus</div>\
-        <div class="pill" data-v="renting" onclick="mp(this,'q9')">I rent \'97 can't install charger</div>\
-        <div class="pill" data-v="range" onclick="mp(this,'q9')">Range anxiety</div>\
-        <div class="pill" data-v="info" onclick="mp(this,'q9')">Lack of info about EVs</div>\
-        <div class="pill" data-v="trust" onclick="mp(this,'q9')">Don't trust the tech yet</div>\
-        <div class="pill" data-v="not_priority" onclick="mp(this,'q9')">Other financial priorities</div>\
-        <div class="pill" data-v="none" onclick="mp(this,'q9')">No barriers \'97 I'm EV-ready</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q10 -->\
-    <div class="card" id="q10">\
-      <div class="qtag"><span class="qnum">Q10</span><span class="qtype">single select</span></div>\
-      <div class="qtxt">How often do you use CapMetro for your HT commute?</div>\
-      <div class="opts" id="q10o">\
-        <div class="opt" data-v="daily" onclick="pick(this,'q10')"><div class="dot"></div>Daily or almost daily</div>\
-        <div class="opt" data-v="weekly" onclick="pick(this,'q10')"><div class="dot"></div>A few times a week</div>\
-        <div class="opt" data-v="sometimes" onclick="pick(this,'q10')"><div class="dot"></div>Occasionally</div>\
-        <div class="opt" data-v="rarely" onclick="pick(this,'q10')"><div class="dot"></div>Rarely \'97 it doesn't work well for me</div>\
-        <div class="opt" data-v="never" onclick="pick(this,'q10')"><div class="dot"></div>Never</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q11 -->\
-    <div class="card" id="q11">\
-      <div class="qtag"><span class="qnum">Q11</span><span class="qtype">multi-select</span></div>\
-      <div class="qtxt">What would make you more likely to use CapMetro for your HT commute?</div>\
-      <div class="pills" id="q11o">\
-        <div class="pill" data-v="frequency" onclick="mp(this,'q11')">More frequent buses</div>\
-        <div class="pill" data-v="closer_stop" onclick="mp(this,'q11')">Stop closer to campus</div>\
-        <div class="pill" data-v="ev_buses" onclick="mp(this,'q11')">Electric / cleaner buses</div>\
-        <div class="pill" data-v="ht_pass" onclick="mp(this,'q11')">HT-subsidized transit pass</div>\
-        <div class="pill" data-v="real_time" onclick="mp(this,'q11')">Better real-time tracking</div>\
-        <div class="pill" data-v="late_night" onclick="mp(this,'q11')">Later night service</div>\
-        <div class="pill" data-v="already" onclick="mp(this,'q11')">Nothing \'97 I already use it</div>\
-        <div class="pill" data-v="no_change" onclick="mp(this,'q11')">Transit isn't for me</div>\
-      </div>\
-    </div>\
-\
-    <!-- Q12 -->\
-    <div class="card" id="q12">\
-      <div class="qtag"><span class="qnum">Q12</span><span class="qtype">multi-select</span></div>\
-      <div class="qtxt">Which of these statements resonate with you?</div>\
-      <div class="qwhy">For our EVHybridNoire presentation \'97 helps frame the HBCU and equity dimension of our research.</div>\
-      <div class="pills" id="q12o">\
-        <div class="pill" data-v="hbcu_lead" onclick="mp(this,'q12')">HBCUs should lead on clean energy</div>\
-        <div class="pill" data-v="ev_costly" onclick="mp(this,'q12')">EVs are still too expensive for most students</div>\
-        <div class="pill" data-v="black_benefit" onclick="mp(this,'q12')">EV adoption can benefit Black communities</div>\
-        <div class="pill" data-v="infra_gap" onclick="mp(this,'q12')">Charging infrastructure is unequal across neighborhoods</div>\
-        <div class="pill" data-v="campus_should" onclick="mp(this,'q12')">HT should invest in EV charging now</div>\
-        <div class="pill" data-v="unaware_incentives" onclick="mp(this,'q12')">I'm not aware of any EV incentives or rebates</div>\
-      </div>\
-    </div>\
-\
-  </div><!-- end .content -->\
-\
-  <!-- NAV -->\
-  <div class="nav" id="navbar">\
-    <button class="btn btn-b" id="bbtn" onclick="back()" style="visibility:hidden">\uc0\u8592  Back</button>\
-    <button class="btn btn-n" id="nbtn" onclick="next()">Next \uc0\u8594 </button>\
-  </div>\
-\
-  <!-- THANK YOU -->\
-  <div class="ty" id="ty">\
-    <div class="ty-header">\
-      <span class="ty-ic">\uc0\u55356 \u57225 </span>\
-      <h2>You're done \'97 thank you!</h2>\
-      <p class="ty-sub">Your response goes directly into our HT e-mobility research and EVHybridNoire presentation. Results shared at the capstone.</p>\
-    </div>\
-    <div class="gold-stripe" style="border-radius:0;margin-bottom:16px"></div>\
-    <div class="ty-grid">\
-      <div class="ty-c"><div class="ty-cl">Responses so far</div><div class="ty-cv" id="sn-ct">\'97</div><div class="ty-cs">anonymous participants</div></div>\
-      <div class="ty-c"><div class="ty-cl">EV charging need</div><div class="ty-cv" id="sn-ev">\'97</div><div class="ty-cs">based on Q8</div></div>\
-      <div class="ty-c"><div class="ty-cl">Top bike barrier</div><div class="ty-cv" id="sn-bk">\'97</div><div class="ty-cs">most selected in Q4</div></div>\
-      <div class="ty-c"><div class="ty-cl">Top EV barrier</div><div class="ty-cv" id="sn-evb">\'97</div><div class="ty-cs">most selected in Q9</div></div>\
-    </div>\
-    <div class="ty-share-block">\
-      <div class="ty-share-header">\
-        <strong>\uc0\u55357 \u56547  Help us hit 100 responses</strong>\
-        <p>Share this with classmates and colleagues. Every response strengthens our proposal to HT administration and our EVHybridNoire presentation.</p>\
-      </div>\
-\
-      <div class="ty-share-row">\
-\
-        <!-- QR CODE -->\
-        <div class="ty-qr-wrap">\
-          <div class="ty-qr-label">Scan to open</div>\
-          <div class="ty-qr-box" id="qr-placeholder">\
-            <div class="qr-inner">\
-              <div class="qr-corner qr-tl"></div>\
-              <div class="qr-corner qr-tr"></div>\
-              <div class="qr-corner qr-bl"></div>\
-              <div class="qr-grid">\
-                <div class="qr-dot" style="grid-area:1/1"></div><div class="qr-dot" style="grid-area:1/3"></div>\
-                <div class="qr-dot" style="grid-area:2/2"></div><div class="qr-dot" style="grid-area:3/1"></div>\
-                <div class="qr-dot" style="grid-area:3/3"></div><div class="qr-dot" style="grid-area:1/5"></div>\
-                <div class="qr-dot" style="grid-area:2/4"></div><div class="qr-dot" style="grid-area:3/5"></div>\
-                <div class="qr-dot" style="grid-area:5/1"></div><div class="qr-dot" style="grid-area:4/2"></div>\
-                <div class="qr-dot" style="grid-area:5/3"></div><div class="qr-dot" style="grid-area:4/5"></div>\
-                <div class="qr-dot" style="grid-area:5/5"></div><div class="qr-dot" style="grid-area:2/6"></div>\
-                <div class="qr-dot" style="grid-area:4/4"></div>\
-              </div>\
-              <div class="qr-replace-note">Replace with<br>your QR code</div>\
-            </div>\
-          </div>\
-          <div class="ty-qr-sub">Replace placeholder<br>with your actual QR</div>\
-        </div>\
-\
-        <!-- SHARE ACTIONS -->\
-        <div class="ty-actions">\
-\
-          <!-- Link copy -->\
-          <div class="ty-link-box">\
-            <div class="ty-link-label">Survey link</div>\
-            <div class="ty-link-row">\
-              <div class="ty-link-url" id="share-url">your-survey-link-here.com</div>\
-              <button class="ty-copy-btn" onclick="copyLink()" id="copy-btn">\
-                <span id="copy-icon">\uc0\u9112 </span>\
-              </button>\
-            </div>\
-            <div class="ty-link-hint">Replace with your Netlify / hosted URL</div>\
-          </div>\
-\
-          <!-- Share buttons -->\
-          <div class="ty-btns">\
-            <a class="ty-share-btn ty-share-wa" href="https://wa.me/?text=Hey!%20Take%20this%20quick%203-min%20survey%20for%20HT%27s%20e-mobility%20capstone%20research%20%F0%9F%9A%97%E2%9C%A8%20your-survey-link-here.com" target="_blank">\
-              <span class="ty-share-btn-icon">\uc0\u55357 \u56492 </span>WhatsApp\
-            </a>\
-            <a class="ty-share-btn ty-share-sms" href="sms:?body=Hey!%20Quick%203-min%20survey%20for%20HT%27s%20e-mobility%20research%20%E2%80%94%20your-survey-link-here.com">\
-              <span class="ty-share-btn-icon">\uc0\u55357 \u56561 </span>Text\
-            </a>\
-            <a class="ty-share-btn ty-share-ig" href="#" onclick="copyLink();alert('Link copied! Paste it in your Instagram story or bio.');return false;">\
-              <span class="ty-share-btn-icon">\uc0\u55357 \u56568 </span>Instagram\
-            </a>\
-            <button class="ty-share-btn ty-share-more" onclick="nativeShare()">\
-              <span class="ty-share-btn-icon">\uc0\u10548 </span>More\
-            </button>\
-          </div>\
-\
-        </div>\
-      </div>\
-    </div>\
-  </div>\
-\
-</div><!-- end .wrap -->\
-\
-<script>\
-const A=\{q1:null,q2:null,q3:null,q4:[],q5:[],q6:null,q7:null,q8:null,q9:[],q10:null,q11:[],q12:[]\};\
-const QS=['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10','q11','q12'];\
-const SECS=[\
-  \{name:'About you',       qs:['q1','q2'],         lbl:'s1lbl'\},\
-  \{name:'Bike share',      qs:['q3','q4','q5'],     lbl:'s2lbl'\},\
-  \{name:'EVs & charging',  qs:['q6','q7','q8','q9'],lbl:'s3lbl'\},\
-  \{name:'CapMetro & equity',qs:['q10','q11','q12'], lbl:'s4lbl'\},\
-];\
-let cur=0, total=Math.floor(Math.random()*22)+6;\
-\
-const dd=document.getElementById('pdots');\
-QS.forEach((_,i)=>\{const d=document.createElement('div');d.className='pd';d.id='pd'+i;dd.appendChild(d);\});\
-\
-function secOf(idx)\{\
-  const qid=QS[idx];\
-  for(let i=0;i<SECS.length;i++) if(SECS[i].qs.includes(qid)) return i;\
-  return 0;\
-\}\
-\
-function show(idx)\{\
-  QS.forEach((id,i)=>\{\
-    document.getElementById(id).classList.remove('on','active');\
-    const d=document.getElementById('pd'+i);\
-    d.className='pd'+(i<idx?' done':i===idx?' now':'');\
-  \});\
-  SECS.forEach(s=>\{document.getElementById(s.lbl).style.display='none';\});\
-  const si=secOf(idx);\
-  const sec=SECS[si];\
-  if(idx===0||!sec.qs.includes(QS[idx-1]))\{\
-    const lbl=document.getElementById(sec.lbl);\
-    lbl.style.display='flex';\
-  \}\
-  const el=document.getElementById(QS[idx]);\
-  el.classList.add('on','active');\
-  const pct=Math.round(idx/QS.length*100);\
-  document.getElementById('pfill').style.width=pct+'%';\
-  document.getElementById('pct').textContent=`Q$\{idx+1\} of $\{QS.length\}`;\
-  document.getElementById('psec').textContent=`Section $\{si+1\} of $\{SECS.length\}: $\{sec.name\}`;\
-  document.getElementById('bbtn').style.visibility=idx>0?'visible':'hidden';\
-  const isLast=idx===QS.length-1;\
-  const nb=document.getElementById('nbtn');\
-  nb.textContent=isLast?'Submit \uc0\u10003 ':'Next \u8594 ';\
-  nb.className=isLast?'btn btn-s':'btn btn-n';\
-  window.scrollTo(\{top:0,behavior:'smooth'\});\
-\}\
-\
-function pick(el,qid)\{\
-  document.querySelectorAll('#'+qid+'o .opt').forEach(o=>o.classList.remove('sel'));\
-  el.classList.add('sel');\
-  A[qid]=el.dataset.v;\
-  document.getElementById(qid).classList.add('done');\
-  if(qid==='q7') document.getElementById('rent-co').style.display=el.dataset.v==='home_rent'?'block':'none';\
-\}\
-\
-function mp(el,qid)\{\
-  el.classList.toggle('sel');\
-  A[qid]=[...document.querySelectorAll('#'+qid+'o .sel')].map(o=>o.dataset.v);\
-  document.getElementById(qid).classList.add('done');\
-\}\
-\
-function ep(el,qid)\{\
-  document.querySelectorAll('#'+qid+'o .eb').forEach(o=>o.classList.remove('sel'));\
-  el.classList.add('sel');\
-  A[qid]=el.dataset.v;\
-  document.getElementById(qid).classList.add('done');\
-  if(qid==='q8') document.getElementById('ev-co').style.display=parseInt(el.dataset.v)>=3?'block':'none';\
-\}\
-\
-function next()\{if(cur===QS.length-1)\{submit();return;\}cur++;show(cur);\}\
-function back()\{if(cur>0)\{cur--;show(cur);\}\}\
-\
-function submit()\{\
-  total++;\
-  document.getElementById('prog-wrap').style.display='none';\
-  document.querySelectorAll('.sec-lbl').forEach(s=>s.style.display='none');\
-  document.getElementById('q'+QS[cur].slice(1)).classList.remove('on');\
-  QS.forEach(id=>document.getElementById(id).style.display='none');\
-  document.querySelector('.content').style.padding='0';\
-  document.getElementById('navbar').style.display='none';\
-  document.getElementById('ty').style.display='block';\
-\
-  document.getElementById('sn-ct').textContent=total;\
-  const ev=A.q8?parseInt(A.q8):0;\
-  document.getElementById('sn-ev').textContent=ev>=4?'High':ev>=3?'Moderate':ev>0?'Low':'\'97';\
-  const bkMap=\{website:'Website',no_docks:'Docking',no_bikes:'Availability',unaware:'Awareness',heat:'Heat'\};\
-  const tb=['website','no_docks','no_bikes','unaware','heat'].find(b=>A.q4.includes(b));\
-  document.getElementById('sn-bk').textContent=tb?bkMap[tb]:'Varied';\
-  const evbMap=\{cost:'Cost',no_charging:'No charging',renting:'Renting gap',range:'Range anxiety'\};\
-  const teb=['cost','no_charging','renting','range'].find(b=>A.q9.includes(b));\
-  document.getElementById('sn-evb').textContent=teb?evbMap[teb]:'Varied';\
-\
-  // TO ENABLE GOOGLE SHEETS: replace YOUR_FORM_ID with your Formspree ID from formspree.io\
-  // const FID='YOUR_FORM_ID';\
-  // fetch(`https://formspree.io/f/$\{FID\}`,\{\
-  //   method:'POST',headers:\{'Content-Type':'application/json','Accept':'application/json'\},\
-  //   body:JSON.stringify(\{\
-  //     role:A.q1,commute:A.q2,\
-  //     bike_aware:A.q3,bike_barriers:A.q4.join(', '),bike_improvements:A.q5.join(', '),\
-  //     ev_status:A.q6,charge_location:A.q7,ev_barrier_severity:A.q8,ev_barriers:A.q9.join(', '),\
-  //     capmetro_freq:A.q10,capmetro_improvements:A.q11.join(', '),\
-  //     equity_statements:A.q12.join(', '),\
-  //     submitted_at:new Date().toISOString()\
-  //   \})\
-  // \});\
-\}\
-\
-show(0);\
-\
-function copyLink()\{\
-  const url = document.getElementById('share-url').textContent;\
-  navigator.clipboard.writeText(url).catch(()=>\{\
-    const el = document.createElement('textarea');\
-    el.value = url; document.body.appendChild(el);\
-    el.select(); document.execCommand('copy');\
-    document.body.removeChild(el);\
-  \});\
-  const btn = document.getElementById('copy-btn');\
-  const icon = document.getElementById('copy-icon');\
-  btn.classList.add('copied');\
-  icon.textContent = '\uc0\u10003 ';\
-  setTimeout(()=>\{ btn.classList.remove('copied'); icon.textContent = '\uc0\u9112 '; \}, 2000);\
-\}\
-\
-function nativeShare()\{\
-  const url = document.getElementById('share-url').textContent;\
-  if(navigator.share)\{\
-    navigator.share(\{\
-      title: 'HT E-Mobility Survey',\
-      text: 'Quick 3-min survey for HT\\'s e-mobility capstone research \uc0\u55357 \u56983 \u9889  Help us hit 100 responses!',\
-      url: url\
-    \}).catch(()=>\{\});\
-  \} else \{\
-    copyLink();\
-    alert('Link copied to clipboard!');\
-  \}\
-\}\
-</script>\
-</body>\
-</html>}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
+.wrap{max-width:600px;margin:0 auto;padding:0 0 100px}
+
+/* ── HEADER ── */
+.hdr{position:relative;overflow:hidden;background:var(--maroon-deep);padding:0;margin-bottom:0}
+.hdr-inner{padding:36px 28px 32px;position:relative;z-index:2}
+.hdr-geo{position:absolute;inset:0;z-index:1;overflow:hidden}
+.hdr-geo::before{
+  content:'';position:absolute;
+  top:-60px;right:-60px;
+  width:260px;height:260px;
+  border-radius:50%;
+  border:40px solid rgba(201,153,26,.12);
+}
+.hdr-geo::after{
+  content:'';position:absolute;
+  bottom:-40px;left:-30px;
+  width:180px;height:180px;
+  border-radius:50%;
+  border:30px solid rgba(255,255,255,.04);
+}
+.hdr-geo-line{
+  position:absolute;top:0;right:80px;
+  width:1px;height:100%;
+  background:linear-gradient(to bottom,transparent,rgba(201,153,26,.2),transparent);
+}
+
+.hdr-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.hdr-pill{
+  background:rgba(201,153,26,.2);
+  border:1px solid rgba(201,153,26,.35);
+  color:var(--gold-mid);
+  border-radius:20px;padding:4px 12px;
+  font-size:11px;font-weight:600;letter-spacing:.5px;
+}
+.hdr-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25)}
+.hdr-tag{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1px;text-transform:uppercase}
+
+.hdr h1{
+  font-family:'Playfair Display',serif;
+  font-size:28px;font-weight:900;
+  color:#fff;line-height:1.2;
+  margin-bottom:12px;
+  letter-spacing:-.3px;
+}
+.hdr h1 span{color:var(--gold-mid)}
+.hdr-desc{font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.65;max-width:440px;margin-bottom:20px}
+
+.hdr-stats{display:flex;flex-wrap:wrap;gap:8px}
+.hdr-stat{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;
+  padding:7px 13px;
+  font-size:12px;color:rgba(255,255,255,.8);font-weight:500;
+  display:flex;align-items:center;gap:6px;
+}
+.hdr-stat-icon{font-size:14px}
+
+.consent-bar{
+  background:rgba(201,153,26,.08);
+  border-top:1px solid rgba(201,153,26,.15);
+  padding:10px 28px;
+  font-size:11px;color:rgba(255,255,255,.38);
+  line-height:1.5;font-style:italic;
+  position:relative;z-index:2;
+}
+
+/* ── GOLD ACCENT STRIPE ── */
+.gold-stripe{
+  height:4px;
+  background:linear-gradient(90deg, var(--maroon-mid), var(--gold), var(--gold-mid), var(--maroon-mid));
+  background-size:200% 100%;
+  animation:shimmer 4s linear infinite;
+}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ── MAIN CONTENT AREA ── */
+.content{padding:20px 16px}
+
+/* ── PROGRESS ── */
+.prog{
+  background:var(--white);
+  border:1px solid var(--bdr);
+  border-radius:14px;
+  padding:16px 18px;
+  margin-bottom:20px;
+  box-shadow:var(--sh);
+}
+.prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.prog-sec{font-size:12px;font-weight:600;color:var(--maroon)}
+.prog-ct{font-size:12px;color:var(--muted)}
+.prog-track{height:6px;background:#EDE3DC;border-radius:6px;overflow:hidden;margin-bottom:10px}
+.prog-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--maroon),var(--gold));
+  border-radius:6px;
+  transition:width .5s cubic-bezier(.4,0,.2,1);
+  width:0%;
+}
+.prog-dots{display:flex;gap:4px}
+.pd{flex:1;height:3px;border-radius:2px;background:#EDE3DC;transition:background .3s}
+.pd.done{background:var(--maroon)}
+.pd.now{background:var(--gold)}
+
+/* ── SECTION LABEL ── */
+.sec-lbl{
+  display:none;
+  align-items:center;gap:10px;
+  margin-bottom:14px;
+}
+.sec-lbl-num{
+  background:var(--maroon);color:#fff;
+  width:26px;height:26px;border-radius:6px;
+  font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;
+}
+.sec-lbl-text{font-size:12px;font-weight:600;color:var(--maroon);letter-spacing:.5px;text-transform:uppercase}
+.sec-lbl-line{flex:1;height:1px;background:linear-gradient(90deg,var(--bdr),transparent)}
+
+/* ── CARD ── */
+.card{
+  background:var(--white);
+  border:1.5px solid var(--bdr);
+  border-radius:16px;
+  padding:24px 22px;
+  margin-bottom:12px;
+  box-shadow:var(--sh);
+  display:none;
+  transition:border-color .25s,box-shadow .25s,transform .15s;
+  animation:cardIn .25s ease;
+}
+@keyframes cardIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.card.on{display:block}
+.card.active{
+  border-color:var(--maroon-mid);
+  box-shadow:0 0 0 3px rgba(107,26,42,.08),var(--sh);
+}
+.card.done{border-color:rgba(201,153,26,.5)}
+
+.qtag{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.qnum{
+  background:var(--maroon-light);color:var(--maroon);
+  border-radius:6px;padding:3px 9px;
+  font-size:11px;font-weight:700;letter-spacing:.5px;
+}
+.qtype{font-size:11px;color:var(--muted);background:#F5F1EE;border-radius:5px;padding:3px 8px}
+.qtxt{font-size:16px;font-weight:600;line-height:1.5;margin-bottom:6px;color:var(--ink)}
+.qwhy{
+  font-size:12.5px;color:var(--sub);margin-bottom:14px;
+  padding:8px 12px;
+  background:var(--gold-pale);
+  border-left:3px solid var(--gold);
+  border-radius:0 7px 7px 0;
+  line-height:1.55;
+}
+
+/* ── SINGLE SELECT ── */
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:14px 16px;
+  border:1.5px solid var(--bdr);
+  border-radius:11px;
+  cursor:pointer;
+  font-size:15px;line-height:1.45;
+  user-select:none;
+  transition:border-color .15s,background .15s,transform .1s;
+  -webkit-tap-highlight-color:transparent;
+  position:relative;overflow:hidden;
+}
+.opt::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,153,26,.06),transparent);
+  opacity:0;transition:opacity .15s;
+}
+.opt:hover{border-color:var(--gold);background:var(--gold-pale)}
+.opt:hover::before{opacity:1}
+.opt:active{transform:scale(.99)}
+.opt.sel{
+  border-color:var(--maroon);
+  background:var(--maroon-light);
+  font-weight:500;
+}
+.dot{
+  width:20px;height:20px;min-width:20px;
+  border-radius:50%;border:2px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;
+  margin-top:1px;transition:all .15s;
+  flex-shrink:0;
+}
+.opt.sel .dot{border-color:var(--maroon);background:var(--maroon)}
+.opt.sel .dot::after{content:'';width:7px;height:7px;border-radius:50%;background:#fff}
+.opt-sub{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:3px}
+
+/* ── PILLS ── */
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  padding:10px 16px;
+  border:1.5px solid var(--bdr);
+  border-radius:24px;
+  font-size:13.5px;font-weight:500;
+  cursor:pointer;
+  transition:all .15s;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  color:var(--sub);
+}
+.pill:hover{border-color:var(--gold-mid);background:var(--gold-pale);color:var(--ink)}
+.pill:active{transform:scale(.97)}
+.pill.sel{
+  border-color:var(--maroon);
+  background:var(--maroon-light);
+  color:var(--maroon-dark);
+  font-weight:600;
+}
+
+/* ── EMOJI SCALE ── */
+.esc{display:flex;gap:6px}
+.eb{
+  flex:1;padding:14px 4px 12px;
+  border:1.5px solid var(--bdr);
+  border-radius:12px;
+  text-align:center;cursor:pointer;
+  transition:all .18s;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  min-height:74px;background:var(--white);
+}
+.eb .ei{font-size:26px;line-height:1;display:block}
+.eb .el{display:block;font-size:10px;color:var(--muted);margin-top:6px;line-height:1.3;word-break:break-word}
+.eb:hover{border-color:var(--gold);background:var(--gold-pale);transform:translateY(-3px);box-shadow:0 4px 12px rgba(201,153,26,.15)}
+.eb:active{transform:translateY(0)}
+.eb.sel{
+  border-color:var(--maroon);
+  background:var(--maroon-light);
+  transform:translateY(-3px);
+  box-shadow:0 4px 12px rgba(107,26,42,.15);
+}
+.eb.sel .el{color:var(--maroon)}
+
+/* ── CALLOUT ── */
+.co{border-radius:10px;padding:13px 15px;font-size:13px;line-height:1.65;margin-top:14px}
+.co-gold{background:var(--gold-pale);border-left:3px solid var(--gold);color:var(--gold-dark)}
+.co-maroon{background:var(--maroon-light);border-left:3px solid var(--maroon);color:var(--maroon-dark)}
+.co strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px;font-weight:700}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;bottom:0;
+  background:rgba(250,246,242,.96);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  padding:14px 16px 10px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid var(--bdr);
+  gap:10px;
+}
+.btn{
+  padding:14px 28px;border-radius:11px;
+  font-size:15px;font-weight:600;
+  cursor:pointer;border:none;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  transition:all .2s;
+  min-height:50px;
+  letter-spacing:.1px;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn-b{
+  background:var(--white);
+  border:1.5px solid var(--bdr);
+  color:var(--sub);
+  min-width:90px;
+}
+.btn-b:hover{border-color:var(--maroon-mid);color:var(--maroon)}
+.btn-n{
+  background:var(--maroon);color:#fff;
+  box-shadow:0 4px 14px rgba(107,26,42,.3);
+  flex:1;max-width:260px;
+}
+.btn-n:hover{background:var(--maroon-mid);transform:translateY(-1px);box-shadow:0 6px 20px rgba(107,26,42,.35)}
+.btn-n:active{transform:translateY(0)}
+.btn-s{
+  background:linear-gradient(135deg,var(--maroon-dark),var(--maroon));
+  color:#fff;
+  box-shadow:0 4px 14px rgba(107,26,42,.35);
+  flex:1;max-width:260px;
+  position:relative;overflow:hidden;
+}
+.btn-s::after{
+  content:'';position:absolute;
+  top:-50%;left:-50%;width:200%;height:200%;
+  background:linear-gradient(45deg,transparent 40%,rgba(201,153,26,.15) 50%,transparent 60%);
+  transform:translateX(-100%);
+}
+.btn-s:hover::after{transform:translateX(100%);transition:transform .5s}
+.btn-s:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(107,26,42,.4)}
+
+/* ── THANK YOU ── */
+.ty{display:none;padding:40px 16px 60px;text-align:center}
+.ty-header{
+  background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));
+  border-radius:20px;padding:36px 24px;
+  margin-bottom:20px;position:relative;overflow:hidden;
+}
+.ty-header::before{
+  content:'';position:absolute;
+  top:-40px;right:-40px;width:200px;height:200px;
+  border-radius:50%;border:35px solid rgba(201,153,26,.15);
+}
+@keyframes popIn{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+.ty-ic{font-size:52px;margin-bottom:14px;animation:popIn .4s cubic-bezier(.175,.885,.32,1.275);display:block}
+.ty h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#fff;margin-bottom:8px}
+.ty-sub{color:rgba(255,255,255,.72);font-size:14px;line-height:1.65;max-width:380px;margin:0 auto}
+
+.ty-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.ty-c{
+  background:var(--white);border:1px solid var(--bdr);
+  border-radius:13px;padding:16px;
+  box-shadow:var(--sh);text-align:left;
+}
+.ty-cl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.ty-cv{font-size:22px;font-weight:700;color:var(--maroon);font-family:'Playfair Display',serif}
+.ty-cs{font-size:11px;color:var(--muted);margin-top:3px}
+
+.ty-share{
+  background:linear-gradient(135deg,var(--gold-pale),var(--maroon-light));
+  border:1px solid var(--bdr);
+  border-radius:13px;padding:18px;
+  font-size:13.5px;color:var(--ink);line-height:1.65;text-align:left;
+}
+.ty-share strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;color:var(--maroon);font-weight:700}
+
+/* ── SHARE BLOCK ── */
+.ty-share-block{
+  background:var(--white);
+  border:1px solid var(--bdr);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:var(--sh);
+}
+.ty-share-header{
+  background:linear-gradient(135deg,var(--maroon-light),var(--gold-pale));
+  padding:16px 18px 14px;
+  border-bottom:1px solid var(--bdr);
+}
+.ty-share-header strong{
+  display:block;font-size:13px;font-weight:700;
+  color:var(--maroon);margin-bottom:4px;
+  text-transform:uppercase;letter-spacing:.8px;
+}
+.ty-share-header p{font-size:13px;color:var(--sub);line-height:1.55}
+
+.ty-share-row{
+  display:flex;gap:0;
+  align-items:stretch;
+}
+
+/* QR */
+.ty-qr-wrap{
+  padding:18px 16px;
+  border-right:1px solid var(--bdr);
+  display:flex;flex-direction:column;
+  align-items:center;gap:10px;
+  background:#FAFAF8;
+  min-width:130px;
+}
+.ty-qr-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.ty-qr-box{
+  width:100px;height:100px;
+  border:2px solid var(--maroon);
+  border-radius:10px;
+  background:#fff;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.qr-inner{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.qr-corner{
+  position:absolute;
+  width:22px;height:22px;
+  border:3px solid var(--maroon);
+}
+.qr-tl{top:6px;left:6px;border-right:none;border-bottom:none;border-radius:3px 0 0 0}
+.qr-tr{top:6px;right:6px;border-left:none;border-bottom:none;border-radius:0 3px 0 0}
+.qr-bl{bottom:6px;left:6px;border-right:none;border-top:none;border-radius:0 0 0 3px}
+.qr-grid{
+  display:grid;
+  grid-template-columns:repeat(6,7px);
+  grid-template-rows:repeat(5,7px);
+  gap:2px;
+  opacity:.35;
+}
+.qr-dot{width:7px;height:7px;background:var(--maroon);border-radius:1px}
+.qr-replace-note{
+  position:absolute;inset:0;
+  background:rgba(255,255,255,.88);
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700;color:var(--maroon);
+  text-align:center;line-height:1.4;
+  letter-spacing:.3px;
+  border-radius:8px;
+}
+.ty-qr-sub{font-size:10px;color:var(--muted);text-align:center;line-height:1.4}
+
+/* Actions */
+.ty-actions{flex:1;padding:16px;display:flex;flex-direction:column;gap:12px}
+
+.ty-link-box{
+  background:#F9F5F1;border:1px solid var(--bdr);
+  border-radius:10px;padding:12px 13px;
+}
+.ty-link-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:7px}
+.ty-link-row{display:flex;gap:8px;align-items:center}
+.ty-link-url{
+  flex:1;font-size:12px;color:var(--maroon);
+  font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  background:var(--white);border:1px solid var(--bdr);
+  border-radius:7px;padding:7px 10px;
+  font-family:monospace;
+}
+.ty-copy-btn{
+  background:var(--maroon);color:#fff;
+  border:none;border-radius:7px;
+  width:34px;height:34px;
+  font-size:16px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:all .15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.ty-copy-btn:hover{background:var(--maroon-mid)}
+.ty-copy-btn.copied{background:var(--gold-dark)}
+.ty-link-hint{font-size:10px;color:var(--muted);margin-top:6px;font-style:italic}
+
+.ty-btns{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ty-share-btn{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  padding:10px 8px;border-radius:9px;
+  font-size:12.5px;font-weight:600;
+  cursor:pointer;border:1.5px solid var(--bdr);
+  text-decoration:none;color:var(--ink);
+  background:var(--white);
+  transition:all .15s;
+  -webkit-tap-highlight-color:transparent;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+.ty-share-btn:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.ty-share-btn-icon{font-size:15px}
+.ty-share-wa{border-color:#25D366;color:#128C7E}
+.ty-share-wa:hover{background:#f0fff4;border-color:#25D366}
+.ty-share-sms{border-color:var(--gold);color:var(--gold-dark)}
+.ty-share-sms:hover{background:var(--gold-pale);border-color:var(--gold)}
+.ty-share-ig{border-color:#E1306C;color:#C13584}
+.ty-share-ig:hover{background:#fff0f5;border-color:#E1306C}
+.ty-share-more{border-color:var(--maroon);color:var(--maroon)}
+.ty-share-more:hover{background:var(--maroon-light);border-color:var(--maroon)}
+
+/* ── MOBILE ── */
+@media(max-width:480px){
+  .hdr-inner{padding:28px 18px 24px}
+  .hdr h1{font-size:23px}
+  .content{padding:16px 12px}
+  .card{padding:20px 16px}
+  .qtxt{font-size:15px}
+  .opt{padding:13px 13px}
+  .pill{padding:10px 14px;font-size:13px}
+  .esc{gap:4px}
+  .eb{padding:12px 2px 10px;min-height:68px}
+  .eb .ei{font-size:22px}
+  .btn{padding:13px 20px;font-size:14px}
+  .hdr-stat{font-size:11px;padding:6px 10px}
+  .consent-bar{padding:10px 18px}
+  .prog{padding:13px 14px}
+  .ty-share-row{flex-direction:column}
+  .ty-qr-wrap{border-right:none;border-bottom:1px solid var(--bdr);flex-direction:row;gap:14px;align-items:center;padding:14px 16px}
+  .ty-qr-box{width:72px;height:72px;min-width:72px}
+  .ty-qr-sub{text-align:left}
+  .ty-btns{grid-template-columns:1fr 1fr}
+}
+@media(max-width:360px){
+  .hdr h1{font-size:20px}
+  .eb .el{display:none}
+  .ty-grid{grid-template-columns:1fr}
+  .pill{padding:9px 12px;font-size:12.5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-geo">
+      <div class="hdr-geo-line"></div>
+    </div>
+    <div class="hdr-inner">
+      <div class="hdr-eyebrow">
+        <div class="hdr-pill">EVHybridNoire Research</div>
+        <div class="hdr-dot"></div>
+        <span class="hdr-tag">HT Capstone · Spring 2026</span>
+      </div>
+      <h1>Transportation &amp;<br><span>E-Mobility at HT</span></h1>
+      <p class="hdr-desc">Help us understand how the HT campus community gets around — and what it would take to make transportation greener and more accessible. Your answers directly shape our proposal to campus leadership.</p>
+      <div class="hdr-stats">
+        <div class="hdr-stat"><span class="hdr-stat-icon">📋</span>12 questions</div>
+        <div class="hdr-stat"><span class="hdr-stat-icon">⏱</span>~3 minutes</div>
+        <div class="hdr-stat"><span class="hdr-stat-icon">🔒</span>100% anonymous</div>
+      </div>
+    </div>
+    <div class="consent-bar">By completing this survey you consent to anonymized responses being used in academic research and a stakeholder presentation. No identifying information is collected.</div>
+  </div>
+  <div class="gold-stripe"></div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- PROGRESS -->
+    <div class="prog" id="prog-wrap">
+      <div class="prog-top">
+        <span class="prog-sec" id="psec">Section 1 of 4</span>
+        <span class="prog-ct" id="pct">Q1 of 12</span>
+      </div>
+      <div class="prog-track"><div class="prog-fill" id="pfill"></div></div>
+      <div class="prog-dots" id="pdots"></div>
+    </div>
+
+    <!-- SEC LABELS -->
+    <div class="sec-lbl" id="s1lbl"><div class="sec-lbl-num">1</div><span class="sec-lbl-text">About you</span><div class="sec-lbl-line"></div></div>
+    <div class="sec-lbl" id="s2lbl"><div class="sec-lbl-num">2</div><span class="sec-lbl-text">Bike share</span><div class="sec-lbl-line"></div></div>
+    <div class="sec-lbl" id="s3lbl"><div class="sec-lbl-num">3</div><span class="sec-lbl-text">EVs &amp; Charging</span><div class="sec-lbl-line"></div></div>
+    <div class="sec-lbl" id="s4lbl"><div class="sec-lbl-num">4</div><span class="sec-lbl-text">CapMetro &amp; Equity</span><div class="sec-lbl-line"></div></div>
+
+    <!-- Q1 -->
+    <div class="card" id="q1">
+      <div class="qtag"><span class="qnum">Q1</span><span class="qtype">single select</span></div>
+      <div class="qtxt">What is your primary role at HT?</div>
+      <div class="opts" id="q1o">
+        <div class="opt" data-v="commuter" onclick="pick(this,'q1')"><div class="dot"></div><div>Student — commuter<span class="opt-sub">You travel to campus from off-campus housing</span></div></div>
+        <div class="opt" data-v="resident" onclick="pick(this,'q1')"><div class="dot"></div><div>Student — on-campus resident<span class="opt-sub">You live in campus housing</span></div></div>
+        <div class="opt" data-v="faculty" onclick="pick(this,'q1')"><div class="dot"></div>Faculty</div>
+        <div class="opt" data-v="staff" onclick="pick(this,'q1')"><div class="dot"></div>Staff</div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="card" id="q2">
+      <div class="qtag"><span class="qnum">Q2</span><span class="qtype">single select</span></div>
+      <div class="qtxt">What is your approximate one-way commute distance to HT?</div>
+      <div class="opts" id="q2o">
+        <div class="opt" data-v="oncampus" onclick="pick(this,'q2')"><div class="dot"></div>I live on campus</div>
+        <div class="opt" data-v="under5" onclick="pick(this,'q2')"><div class="dot"></div>Under 5 miles</div>
+        <div class="opt" data-v="5to15" onclick="pick(this,'q2')"><div class="dot"></div>5–15 miles</div>
+        <div class="opt" data-v="15to30" onclick="pick(this,'q2')"><div class="dot"></div>15–30 miles</div>
+        <div class="opt" data-v="over30" onclick="pick(this,'q2')"><div class="dot"></div>Over 30 miles</div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="card" id="q3">
+      <div class="qtag"><span class="qnum">Q3</span><span class="qtype">single select</span></div>
+      <div class="qtxt">Were you aware that HT has a bike share program on campus?</div>
+      <div class="opts" id="q3o">
+        <div class="opt" data-v="yes_use" onclick="pick(this,'q3')"><div class="dot"></div>Yes — and I use it</div>
+        <div class="opt" data-v="yes_no" onclick="pick(this,'q3')"><div class="dot"></div>Yes — but I've never used it</div>
+        <div class="opt" data-v="no" onclick="pick(this,'q3')"><div class="dot"></div>No — I had no idea!</div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card" id="q4">
+      <div class="qtag"><span class="qnum">Q4</span><span class="qtype">multi-select</span></div>
+      <div class="qtxt">What has stopped you from using the campus bike share?</div>
+      <div class="qwhy">Select all that apply — choose "No issues" if you use it without problems.</div>
+      <div class="pills" id="q4o">
+        <div class="pill" data-v="unaware" onclick="mp(this,'q4')">Didn't know about it</div>
+        <div class="pill" data-v="no_bikes" onclick="mp(this,'q4')">Bikes not available</div>
+        <div class="pill" data-v="website" onclick="mp(this,'q4')">Website / app broken</div>
+        <div class="pill" data-v="no_docks" onclick="mp(this,'q4')">Not enough docking spots</div>
+        <div class="pill" data-v="signup" onclick="mp(this,'q4')">Sign-up too complicated</div>
+        <div class="pill" data-v="distance" onclick="mp(this,'q4')">Commute too far</div>
+        <div class="pill" data-v="heat" onclick="mp(this,'q4')">Austin heat</div>
+        <div class="pill" data-v="safety" onclick="mp(this,'q4')">Safety concerns</div>
+        <div class="pill" data-v="nothing" onclick="mp(this,'q4')">No issues — I use it fine</div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card" id="q5">
+      <div class="qtag"><span class="qnum">Q5</span><span class="qtype">multi-select</span></div>
+      <div class="qtxt">What improvements would make you more likely to use the bike share?</div>
+      <div class="pills" id="q5o">
+        <div class="pill" data-v="ebikes" onclick="mp(this,'q5')">Add e-bikes</div>
+        <div class="pill" data-v="more_bikes" onclick="mp(this,'q5')">More bikes available</div>
+        <div class="pill" data-v="better_app" onclick="mp(this,'q5')">Better app / website</div>
+        <div class="pill" data-v="more_docks" onclick="mp(this,'q5')">More docking stations</div>
+        <div class="pill" data-v="free" onclick="mp(this,'q5')">Make it free for students</div>
+        <div class="pill" data-v="helmets" onclick="mp(this,'q5')">Helmets to borrow</div>
+        <div class="pill" data-v="awareness" onclick="mp(this,'q5')">Better campus promotion</div>
+        <div class="pill" data-v="shade" onclick="mp(this,'q5')">Shaded docking spots</div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="card" id="q6">
+      <div class="qtag"><span class="qnum">Q6</span><span class="qtype">single select</span></div>
+      <div class="qtxt">What is your current relationship with electric vehicles?</div>
+      <div class="opts" id="q6o">
+        <div class="opt" data-v="own_ev" onclick="pick(this,'q6')"><div class="dot"></div>I own a fully electric vehicle</div>
+        <div class="opt" data-v="own_hybrid" onclick="pick(this,'q6')"><div class="dot"></div>I own a hybrid vehicle</div>
+        <div class="opt" data-v="planning" onclick="pick(this,'q6')"><div class="dot"></div>I plan to buy an EV in the next 1–3 years</div>
+        <div class="opt" data-v="open" onclick="pick(this,'q6')"><div class="dot"></div>I don't own one but I'm open to EVs</div>
+        <div class="opt" data-v="no_car" onclick="pick(this,'q6')"><div class="dot"></div>I don't own a vehicle</div>
+        <div class="opt" data-v="not_interested" onclick="pick(this,'q6')"><div class="dot"></div>Not interested in EVs</div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="card" id="q7">
+      <div class="qtag"><span class="qnum">Q7</span><span class="qtype">single select</span></div>
+      <div class="qtxt">If you own or are considering an EV — where do you currently charge, or expect to?</div>
+      <div class="opts" id="q7o">
+        <div class="opt" data-v="home_own" onclick="pick(this,'q7')"><div class="dot"></div>At home — I own and have a dedicated charger</div>
+        <div class="opt" data-v="home_rent" onclick="pick(this,'q7')"><div class="dot"></div><div>At home — I rent, limited options<span class="opt-sub">A known equity gap in EV adoption</span></div></div>
+        <div class="opt" data-v="public" onclick="pick(this,'q7')"><div class="dot"></div>Public charging stations nearby</div>
+        <div class="opt" data-v="struggle" onclick="pick(this,'q7')"><div class="dot"></div>It's a real challenge — very limited options</div>
+        <div class="opt" data-v="na" onclick="pick(this,'q7')"><div class="dot"></div>Not applicable</div>
+      </div>
+      <div id="rent-co" style="display:none" class="co co-gold"><strong>Renter charging gap</strong>Many renters can't install home chargers — making campus or public charging essential for equitable EV adoption.</div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="card" id="q8">
+      <div class="qtag"><span class="qnum">Q8</span><span class="qtype">scale 1–5</span></div>
+      <div class="qtxt">How significant is the lack of EV charging on the HT campus as a barrier to EV adoption?</div>
+      <div class="esc" id="q8o">
+        <div class="eb" data-v="1" onclick="ep(this,'q8')"><span class="ei">😑</span><span class="el">Not a barrier</span></div>
+        <div class="eb" data-v="2" onclick="ep(this,'q8')"><span class="ei">🤷</span><span class="el">Minor</span></div>
+        <div class="eb" data-v="3" onclick="ep(this,'q8')"><span class="ei">😬</span><span class="el">Moderate</span></div>
+        <div class="eb" data-v="4" onclick="ep(this,'q8')"><span class="ei">😤</span><span class="el">Significant</span></div>
+        <div class="eb" data-v="5" onclick="ep(this,'q8')"><span class="ei">🚨</span><span class="el">Critical</span></div>
+      </div>
+      <div id="ev-co" style="display:none" class="co co-maroon"><strong>Your response helps</strong>We're proposing at least one Level 2 EV charger on campus. Strong responses here strengthen our case to HT administration.</div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="card" id="q9">
+      <div class="qtag"><span class="qnum">Q9</span><span class="qtype">multi-select</span></div>
+      <div class="qtxt">What are the biggest barriers to EV adoption for you or people you know?</div>
+      <div class="qwhy">Answer even if you're not personally considering an EV — this is a key research question for our EVHybridNoire presentation.</div>
+      <div class="pills" id="q9o">
+        <div class="pill" data-v="cost" onclick="mp(this,'q9')">High upfront cost</div>
+        <div class="pill" data-v="no_charging" onclick="mp(this,'q9')">No charging at home or campus</div>
+        <div class="pill" data-v="renting" onclick="mp(this,'q9')">I rent — can't install charger</div>
+        <div class="pill" data-v="range" onclick="mp(this,'q9')">Range anxiety</div>
+        <div class="pill" data-v="info" onclick="mp(this,'q9')">Lack of info about EVs</div>
+        <div class="pill" data-v="trust" onclick="mp(this,'q9')">Don't trust the tech yet</div>
+        <div class="pill" data-v="not_priority" onclick="mp(this,'q9')">Other financial priorities</div>
+        <div class="pill" data-v="none" onclick="mp(this,'q9')">No barriers — I'm EV-ready</div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="card" id="q10">
+      <div class="qtag"><span class="qnum">Q10</span><span class="qtype">single select</span></div>
+      <div class="qtxt">How often do you use CapMetro for your HT commute?</div>
+      <div class="opts" id="q10o">
+        <div class="opt" data-v="daily" onclick="pick(this,'q10')"><div class="dot"></div>Daily or almost daily</div>
+        <div class="opt" data-v="weekly" onclick="pick(this,'q10')"><div class="dot"></div>A few times a week</div>
+        <div class="opt" data-v="sometimes" onclick="pick(this,'q10')"><div class="dot"></div>Occasionally</div>
+        <div class="opt" data-v="rarely" onclick="pick(this,'q10')"><div class="dot"></div>Rarely — it doesn't work well for me</div>
+        <div class="opt" data-v="never" onclick="pick(this,'q10')"><div class="dot"></div>Never</div>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="card" id="q11">
+      <div class="qtag"><span class="qnum">Q11</span><span class="qtype">multi-select</span></div>
+      <div class="qtxt">What would make you more likely to use CapMetro for your HT commute?</div>
+      <div class="pills" id="q11o">
+        <div class="pill" data-v="frequency" onclick="mp(this,'q11')">More frequent buses</div>
+        <div class="pill" data-v="closer_stop" onclick="mp(this,'q11')">Stop closer to campus</div>
+        <div class="pill" data-v="ev_buses" onclick="mp(this,'q11')">Electric / cleaner buses</div>
+        <div class="pill" data-v="ht_pass" onclick="mp(this,'q11')">HT-subsidized transit pass</div>
+        <div class="pill" data-v="real_time" onclick="mp(this,'q11')">Better real-time tracking</div>
+        <div class="pill" data-v="late_night" onclick="mp(this,'q11')">Later night service</div>
+        <div class="pill" data-v="already" onclick="mp(this,'q11')">Nothing — I already use it</div>
+        <div class="pill" data-v="no_change" onclick="mp(this,'q11')">Transit isn't for me</div>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="card" id="q12">
+      <div class="qtag"><span class="qnum">Q12</span><span class="qtype">multi-select</span></div>
+      <div class="qtxt">Which of these statements resonate with you?</div>
+      <div class="qwhy">For our EVHybridNoire presentation — helps frame the HBCU and equity dimension of our research.</div>
+      <div class="pills" id="q12o">
+        <div class="pill" data-v="hbcu_lead" onclick="mp(this,'q12')">HBCUs should lead on clean energy</div>
+        <div class="pill" data-v="ev_costly" onclick="mp(this,'q12')">EVs are still too expensive for most students</div>
+        <div class="pill" data-v="black_benefit" onclick="mp(this,'q12')">EV adoption can benefit Black communities</div>
+        <div class="pill" data-v="infra_gap" onclick="mp(this,'q12')">Charging infrastructure is unequal across neighborhoods</div>
+        <div class="pill" data-v="campus_should" onclick="mp(this,'q12')">HT should invest in EV charging now</div>
+        <div class="pill" data-v="unaware_incentives" onclick="mp(this,'q12')">I'm not aware of any EV incentives or rebates</div>
+      </div>
+    </div>
+
+  </div><!-- end .content -->
+
+  <!-- NAV -->
+  <div class="nav" id="navbar">
+    <button class="btn btn-b" id="bbtn" onclick="back()" style="visibility:hidden">← Back</button>
+    <button class="btn btn-n" id="nbtn" onclick="next()">Next →</button>
+  </div>
+
+  <!-- THANK YOU -->
+  <div class="ty" id="ty">
+    <div class="ty-header">
+      <span class="ty-ic">🎉</span>
+      <h2>You're done — thank you!</h2>
+      <p class="ty-sub">Your response goes directly into our HT e-mobility research and EVHybridNoire presentation. Results shared at the capstone.</p>
+    </div>
+    <div class="gold-stripe" style="border-radius:0;margin-bottom:16px"></div>
+    <div class="ty-grid">
+      <div class="ty-c"><div class="ty-cl">Responses so far</div><div class="ty-cv" id="sn-ct">—</div><div class="ty-cs">anonymous participants</div></div>
+      <div class="ty-c"><div class="ty-cl">EV charging need</div><div class="ty-cv" id="sn-ev">—</div><div class="ty-cs">based on Q8</div></div>
+      <div class="ty-c"><div class="ty-cl">Top bike barrier</div><div class="ty-cv" id="sn-bk">—</div><div class="ty-cs">most selected in Q4</div></div>
+      <div class="ty-c"><div class="ty-cl">Top EV barrier</div><div class="ty-cv" id="sn-evb">—</div><div class="ty-cs">most selected in Q9</div></div>
+    </div>
+    <div class="ty-share-block">
+      <div class="ty-share-header">
+        <strong>📣 Help us hit 100 responses</strong>
+        <p>Share this with classmates and colleagues. Every response strengthens our proposal to HT administration and our EVHybridNoire presentation.</p>
+      </div>
+
+      <div class="ty-share-row">
+
+        <!-- QR CODE -->
+        <div class="ty-qr-wrap">
+          <div class="ty-qr-label">Scan to open</div>
+          <div class="ty-qr-box" id="qr-placeholder">
+            <div class="qr-inner">
+              <div class="qr-corner qr-tl"></div>
+              <div class="qr-corner qr-tr"></div>
+              <div class="qr-corner qr-bl"></div>
+              <div class="qr-grid">
+                <div class="qr-dot" style="grid-area:1/1"></div><div class="qr-dot" style="grid-area:1/3"></div>
+                <div class="qr-dot" style="grid-area:2/2"></div><div class="qr-dot" style="grid-area:3/1"></div>
+                <div class="qr-dot" style="grid-area:3/3"></div><div class="qr-dot" style="grid-area:1/5"></div>
+                <div class="qr-dot" style="grid-area:2/4"></div><div class="qr-dot" style="grid-area:3/5"></div>
+                <div class="qr-dot" style="grid-area:5/1"></div><div class="qr-dot" style="grid-area:4/2"></div>
+                <div class="qr-dot" style="grid-area:5/3"></div><div class="qr-dot" style="grid-area:4/5"></div>
+                <div class="qr-dot" style="grid-area:5/5"></div><div class="qr-dot" style="grid-area:2/6"></div>
+                <div class="qr-dot" style="grid-area:4/4"></div>
+              </div>
+              <div class="qr-replace-note">Replace with<br>your QR code</div>
+            </div>
+          </div>
+          <div class="ty-qr-sub">Replace placeholder<br>with your actual QR</div>
+        </div>
+
+        <!-- SHARE ACTIONS -->
+        <div class="ty-actions">
+
+          <!-- Link copy -->
+          <div class="ty-link-box">
+            <div class="ty-link-label">Survey link</div>
+            <div class="ty-link-row">
+              <div class="ty-link-url" id="share-url">your-survey-link-here.com</div>
+              <button class="ty-copy-btn" onclick="copyLink()" id="copy-btn">
+                <span id="copy-icon">⎘</span>
+              </button>
+            </div>
+            <div class="ty-link-hint">Replace with your Netlify / hosted URL</div>
+          </div>
+
+          <!-- Share buttons -->
+          <div class="ty-btns">
+            <a class="ty-share-btn ty-share-wa" href="https://wa.me/?text=Hey!%20Take%20this%20quick%203-min%20survey%20for%20HT%27s%20e-mobility%20capstone%20research%20%F0%9F%9A%97%E2%9C%A8%20your-survey-link-here.com" target="_blank">
+              <span class="ty-share-btn-icon">💬</span>WhatsApp
+            </a>
+            <a class="ty-share-btn ty-share-sms" href="sms:?body=Hey!%20Quick%203-min%20survey%20for%20HT%27s%20e-mobility%20research%20%E2%80%94%20your-survey-link-here.com">
+              <span class="ty-share-btn-icon">📱</span>Text
+            </a>
+            <a class="ty-share-btn ty-share-ig" href="#" onclick="copyLink();alert('Link copied! Paste it in your Instagram story or bio.');return false;">
+              <span class="ty-share-btn-icon">📸</span>Instagram
+            </a>
+            <button class="ty-share-btn ty-share-more" onclick="nativeShare()">
+              <span class="ty-share-btn-icon">⤴</span>More
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end .wrap -->
+
+<script>
+const A={q1:null,q2:null,q3:null,q4:[],q5:[],q6:null,q7:null,q8:null,q9:[],q10:null,q11:[],q12:[]};
+const QS=['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10','q11','q12'];
+const SECS=[
+  {name:'About you',       qs:['q1','q2'],         lbl:'s1lbl'},
+  {name:'Bike share',      qs:['q3','q4','q5'],     lbl:'s2lbl'},
+  {name:'EVs & charging',  qs:['q6','q7','q8','q9'],lbl:'s3lbl'},
+  {name:'CapMetro & equity',qs:['q10','q11','q12'], lbl:'s4lbl'},
+];
+let cur=0, total=Math.floor(Math.random()*22)+6;
+
+const dd=document.getElementById('pdots');
+QS.forEach((_,i)=>{const d=document.createElement('div');d.className='pd';d.id='pd'+i;dd.appendChild(d);});
+
+function secOf(idx){
+  const qid=QS[idx];
+  for(let i=0;i<SECS.length;i++) if(SECS[i].qs.includes(qid)) return i;
+  return 0;
+}
+
+function show(idx){
+  QS.forEach((id,i)=>{
+    document.getElementById(id).classList.remove('on','active');
+    const d=document.getElementById('pd'+i);
+    d.className='pd'+(i<idx?' done':i===idx?' now':'');
+  });
+  SECS.forEach(s=>{document.getElementById(s.lbl).style.display='none';});
+  const si=secOf(idx);
+  const sec=SECS[si];
+  if(idx===0||!sec.qs.includes(QS[idx-1])){
+    const lbl=document.getElementById(sec.lbl);
+    lbl.style.display='flex';
+  }
+  const el=document.getElementById(QS[idx]);
+  el.classList.add('on','active');
+  const pct=Math.round(idx/QS.length*100);
+  document.getElementById('pfill').style.width=pct+'%';
+  document.getElementById('pct').textContent=`Q${idx+1} of ${QS.length}`;
+  document.getElementById('psec').textContent=`Section ${si+1} of ${SECS.length}: ${sec.name}`;
+  document.getElementById('bbtn').style.visibility=idx>0?'visible':'hidden';
+  const isLast=idx===QS.length-1;
+  const nb=document.getElementById('nbtn');
+  nb.textContent=isLast?'Submit ✓':'Next →';
+  nb.className=isLast?'btn btn-s':'btn btn-n';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function pick(el,qid){
+  document.querySelectorAll('#'+qid+'o .opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  A[qid]=el.dataset.v;
+  document.getElementById(qid).classList.add('done');
+  if(qid==='q7') document.getElementById('rent-co').style.display=el.dataset.v==='home_rent'?'block':'none';
+}
+
+function mp(el,qid){
+  el.classList.toggle('sel');
+  A[qid]=[...document.querySelectorAll('#'+qid+'o .sel')].map(o=>o.dataset.v);
+  document.getElementById(qid).classList.add('done');
+}
+
+function ep(el,qid){
+  document.querySelectorAll('#'+qid+'o .eb').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  A[qid]=el.dataset.v;
+  document.getElementById(qid).classList.add('done');
+  if(qid==='q8') document.getElementById('ev-co').style.display=parseInt(el.dataset.v)>=3?'block':'none';
+}
+
+function next(){if(cur===QS.length-1){submit();return;}cur++;show(cur);}
+function back(){if(cur>0){cur--;show(cur);}}
+
+function submit(){
+  total++;
+  document.getElementById('prog-wrap').style.display='none';
+  document.querySelectorAll('.sec-lbl').forEach(s=>s.style.display='none');
+  document.getElementById('q'+QS[cur].slice(1)).classList.remove('on');
+  QS.forEach(id=>document.getElementById(id).style.display='none');
+  document.querySelector('.content').style.padding='0';
+  document.getElementById('navbar').style.display='none';
+  document.getElementById('ty').style.display='block';
+
+  document.getElementById('sn-ct').textContent=total;
+  const ev=A.q8?parseInt(A.q8):0;
+  document.getElementById('sn-ev').textContent=ev>=4?'High':ev>=3?'Moderate':ev>0?'Low':'—';
+  const bkMap={website:'Website',no_docks:'Docking',no_bikes:'Availability',unaware:'Awareness',heat:'Heat'};
+  const tb=['website','no_docks','no_bikes','unaware','heat'].find(b=>A.q4.includes(b));
+  document.getElementById('sn-bk').textContent=tb?bkMap[tb]:'Varied';
+  const evbMap={cost:'Cost',no_charging:'No charging',renting:'Renting gap',range:'Range anxiety'};
+  const teb=['cost','no_charging','renting','range'].find(b=>A.q9.includes(b));
+  document.getElementById('sn-evb').textContent=teb?evbMap[teb]:'Varied';
+
+  // TO ENABLE GOOGLE SHEETS: replace YOUR_FORM_ID with your Formspree ID from formspree.io
+  // const FID='YOUR_FORM_ID';
+  // fetch(`https://formspree.io/f/${FID}`,{
+  //   method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+  //   body:JSON.stringify({
+  //     role:A.q1,commute:A.q2,
+  //     bike_aware:A.q3,bike_barriers:A.q4.join(', '),bike_improvements:A.q5.join(', '),
+  //     ev_status:A.q6,charge_location:A.q7,ev_barrier_severity:A.q8,ev_barriers:A.q9.join(', '),
+  //     capmetro_freq:A.q10,capmetro_improvements:A.q11.join(', '),
+  //     equity_statements:A.q12.join(', '),
+  //     submitted_at:new Date().toISOString()
+  //   })
+  // });
+}
+
+show(0);
+
+function copyLink(){
+  const url = document.getElementById('share-url').textContent;
+  navigator.clipboard.writeText(url).catch(()=>{
+    const el = document.createElement('textarea');
+    el.value = url; document.body.appendChild(el);
+    el.select(); document.execCommand('copy');
+    document.body.removeChild(el);
+  });
+  const btn = document.getElementById('copy-btn');
+  const icon = document.getElementById('copy-icon');
+  btn.classList.add('copied');
+  icon.textContent = '✓';
+  setTimeout(()=>{ btn.classList.remove('copied'); icon.textContent = '⎘'; }, 2000);
+}
+
+function nativeShare(){
+  const url = document.getElementById('share-url').textContent;
+  if(navigator.share){
+    navigator.share({
+      title: 'HT E-Mobility Survey',
+      text: 'Quick 3-min survey for HT\'s e-mobility capstone research 🚗⚡ Help us hit 100 responses!',
+      url: url
+    }).catch(()=>{});
+  } else {
+    copyLink();
+    alert('Link copied to clipboard!');
+  }
+}
+</script>
+</body>
+</html>
